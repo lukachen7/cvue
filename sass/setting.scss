@@ -1,0 +1,48 @@
+//亮灰色
+$light-grey:#cccccc;
+//动画速度
+$animation-speed:.3s;
+
+
+/*
+ * ios平台专有设置
+ */
+$ios-status-height:20px;
+/*
+ * android平台专有设置
+ */
+$android-status-height:0px;
+
+@mixin appearance-set($style){
+    -webkit-appearance: $style;
+    -moz-appearance: $style;
+    appearance: $style;
+}
+@mixin box-sizing-set-border-box{
+    box-sizing: border-box;
+    box-sizing: -webkit-border-box;
+    box-sizing: -moz-border-box;
+    box-sizing: -0-border-box;
+    box-sizing: -ms-border-box;
+}
+@mixin transform-set($style){
+    -webkit-transform: $style;
+    -moz-transform: $style;
+    -ms-transform: $style;
+    -o-transform: $style;
+    transform: $style;
+}
+@mixin user-select-set($style){
+    -webkit-user-select: $style;
+    -moz-user-select: $style;
+    -ms-user-select: $style;
+    -o-user-select: $style;
+    user-select: $style;
+}
+@mixin text-size-adjust-set($style){
+    -webkit-text-size-adjust: $style;
+    -moz-text-size-adjust: $style;
+    -ms-text-size-adjust: $style;
+    -o-text-size-adjust: $style;
+    text-size-adjust: $style;
+}

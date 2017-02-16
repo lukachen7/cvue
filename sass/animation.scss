@@ -1,0 +1,52 @@
+.nav-push-enter-active {
+  animation: nav-push-in $animation-speed;
+}
+.nav-push-leave-active {
+//animation: nav-pop-out 0;
+}
+@keyframes nav-push-in {
+  0% {
+      @include transform-set(translateX(100%));    
+//  opacity: .5;
+  }
+  100% {
+      @include transform-set(translateX(0));  
+//  opacity: 1.0;
+  }
+}
+@keyframes nav-push-out {
+  0% {
+      @include transform-set(translateX(0));  
+//  opacity: 1.0;
+  }
+  100% {
+      @include transform-set(translateX(-100%));  
+//  opacity: .5;
+  }
+}
+.nav-pop-enter-active {
+//animation: nav-pop-in 0s;
+}
+.nav-pop-leave-active {
+  animation: nav-pop-out $animation-speed;
+}
+@keyframes nav-pop-in {
+  0% {
+      @include transform-set(translateX(-100%));  
+//  opacity: .5;
+  }
+  100% {
+      @include transform-set(translateX(0));  
+//  opacity: 1.0;
+  }
+}
+@keyframes nav-pop-out {
+  0% {
+      @include transform-set(translateX(0));  
+//  opacity: 1.0;
+  }
+  100% {
+      @include transform-set(translateX(100%));  
+//  opacity: .5;
+  }
+}

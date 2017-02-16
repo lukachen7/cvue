@@ -1,0 +1,26 @@
+require.config({
+    baseUrl: '../../',
+    urlArgs: 'v=1',
+    paths: {
+        // require.js plugins
+        text          : 'lib/requirejs/text',
+        // jquery
+        jquery        : 'lib/jquery/jquery-2.1.4.min',
+		//vue
+		vue           : 'lib/vue/vue.min',
+		//其他辅助工具类
+        underscore    : 'lib/lodash.min',
+        iscroll       : 'lib/iscroll/iscroll-probe',
+        moment        : 'lib/moment.min',
+		tween         : 'lib/Tween',
+		fastclick     : 'lib/fastclick',
+		//路径
+		componentPath : 'common/component',
+		modulePath    : 'module'
+    },
+    waitSeconds: 5,
+    shim: {
+        underscore: {exports: '_'},
+        iscroll: {exports: 'IScroll'},
+    }
+});

@@ -1,0 +1,32 @@
+<div>
+	<cv-scroll ref="cvScroll" :is-refresh="true" :is-load-more="true" v-on:pullDownAction="pullDownAction" v-on:pullUpAction="pullUpAction">
+		<div>scroll</div>
+		<div>scroll</div>
+		<div>scroll</div>
+		<div>scroll</div>
+		<div>scroll</div>
+		<div>scroll</div>
+		<div>scroll</div>
+		<div>scroll</div>
+		<div>scroll</div>
+		<div>scroll</div>
+		<div>scroll</div>
+		<div>scroll</div>
+	</cv-scroll>
+	<button v-on:click="navPush('testpage2')">跳转到page2</button>
+	<cv-scroll ref="cvScroll2" :is-refresh="false" :is-load-more="false" v-on:pullDownAction="pullDownAction" v-on:pullUpAction="pullUpAction">
+		<div>scroll</div>
+		<div>scroll</div>
+		<div>scroll</div>
+		<div>scroll</div>
+		<div>scroll</div>
+		<div>scroll</div>
+		<div>scroll</div>
+		<div>scroll</div>
+		<div>scroll</div>
+		<div>scroll</div>
+		<div>scroll</div>
+		<div>scroll</div>
+	</cv-scroll>
+	<div>-----------我是分割线--------------</div>
+</div>

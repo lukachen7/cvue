@@ -1,0 +1,10 @@
+<div class="cv-scroll-container">
+	<div>
+		<cv-pull-down v-show="isRefresh"></cv-pull-down>
+	
+		<slot></slot>
+			
+		<cv-pull-up name="loadMore" v-show="isLoadMore"></cv-pull-up>
+	</div>
+	
+</div>

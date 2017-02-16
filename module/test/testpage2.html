@@ -1,0 +1,11 @@
+<div>
+	<p>testpage2</p>
+	<button v-on:click="$emit('navBack')">back</button>
+	<cv-slider>
+		<!--横排内容如果分行会有小间隔BUG-->
+		<div v-for="item in tmpList" class="cv-slider-item">1i1222222</div>
+	</cv-slider>
+	<cv-slider>
+		<div v-for="item in tmpList" class="cv-slider-item">1i1222222</div>
+	</cv-slider>
+</div>
