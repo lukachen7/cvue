@@ -7,10 +7,12 @@ function(Vue,template,_) {
       return {
       	effect:"nav-push",
         navList:[],
+        currentContent:""
       }
     },
-    props:["currentContent"],
+    props:["defaultContent"],
     mounted:function(){
+    		this.currentContent = this.defaultContent;
     		this.navList.push(this.currentContent);    		
     },
     components:{
@@ -20,7 +22,6 @@ function(Vue,template,_) {
     			this.effect = "nav-push";
     			this.navList.push(content);
     			this.currentContent = content;
-    			console.log(JSON.stringify(this.navList));
     		},
     		"navBack":function (){
     			this.effect = "nav-pop";

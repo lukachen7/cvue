@@ -6,7 +6,7 @@ require.config({
         text          : 'lib/requirejs/text',
         // jquery
         jquery        : 'lib/jquery/jquery-2.1.4.min',
-		//vue
+		// vue
 		vue           : 'lib/vue/vue.min',
 		//其他辅助工具类
         underscore    : 'lib/lodash.min',
@@ -16,6 +16,7 @@ require.config({
 		fastclick     : 'lib/fastclick',
 		//路径
 		componentPath : 'common/component',
+		servicePath   : 'common/service',
 		modulePath    : 'module'
     },
     waitSeconds: 5,

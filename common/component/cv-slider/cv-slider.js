@@ -12,7 +12,6 @@ function(Vue,$,iScroll,template) {
     mounted:function(){
     		var me = this;
     		var firstItem = $(me.$el).find('.cv-slider-item').first();
-    		console.log(firstItem);
     		if(firstItem){
     			$(me.$el).height(firstItem.height());
     			$(me.$el).find(".cv-slider-item-container").height(firstItem.height());

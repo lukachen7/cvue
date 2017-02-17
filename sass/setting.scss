@@ -12,7 +12,9 @@ $ios-status-height:20px;
  * android平台专有设置
  */
 $android-status-height:0px;
-
+/*
+ * 兼容设置
+ */
 @mixin appearance-set($style){
     -webkit-appearance: $style;
     -moz-appearance: $style;

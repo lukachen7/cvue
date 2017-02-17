@@ -13,7 +13,7 @@
 		<div>scroll</div>
 		<div>scroll</div>
 	</cv-scroll>
-	<button v-on:click="navPush('testpage2')">跳转到page2</button>
+	<button v-on:click="navPush(clientPages.testPage2)">跳转到{{clientPages.testPage2}}</button>
 	<cv-scroll ref="cvScroll2" :is-refresh="false" :is-load-more="false" v-on:pullDownAction="pullDownAction" v-on:pullUpAction="pullUpAction">
 		<div>scroll</div>
 		<div>scroll</div>
