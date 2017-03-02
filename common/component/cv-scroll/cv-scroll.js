@@ -49,7 +49,7 @@ function(Vue,iScroll,template,cvPullDown,cvPullUp) {
 		})
 		me.iscroll.on("scroll",function(){
 			if (me.isRefresh){
-				if (this.y > 0) {
+				if (this.y >= 0) {
 					pullDownEl.className = 'pullDown flip';
 					pullDownEl.querySelector('.pullDownLabel').innerHTML = '释放刷新...';
 					this.minScrollY = 0;

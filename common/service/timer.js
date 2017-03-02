@@ -5,6 +5,7 @@
         factory( _ );
     }
 }(function(_) {
+	
 	console.log("service.timer loaded.");
 	var timerSetting = {
 		//时间开关
@@ -19,7 +20,7 @@
 				return;
 			}
 			var tmpId = _.uniqueId("FrameOutCall_");
-			timer.eventDic[tmpId] = {frameTime:frameTime,func:func}
+			timer.eventDic[tmpId] = {frameTime:frameTime,func:func,offsetTime:(timer.frameTimer % frameTime)}
 			return tmpId;
 		},
 		//删除FrameOut事件
@@ -30,21 +31,23 @@
 			}
 		}
 	}
+	//timer注册器，防止注册太多timer事件影响速度
 	var timer = {
+		lastTime:0,
 		//事件列表
 		eventDic:{},
-		//帧时间，用于动画等时间控制器预设帧频为25帧
-		timeOutTime:40,
+		//暂定为0.1秒循环一次
+		timeOutTime:100,
 		//计时器
 		frameTimer:0,
 		//仿帧频时间控制器
 		frameOutCall:function(){
 			var me = this;
-//			console.log('frameOutCall'+me.frameTimer,JSON.stringify(me.eventDic));
 			me.frameTimer++;
+			
 			//这里可以注册时间控制器
-			_.each(me.eventDic,function(eventItem){
-				if ((me.frameTimer % eventItem["frameTime"]) == 0){					
+			_(me.eventDic).forEach(function(eventItem,key){
+				if (((me.frameTimer - eventItem['offsetTime']) % eventItem["frameTime"]) == 0){					
 					if (eventItem && typeof eventItem["func"] == "function"){
 						eventItem["func"]();
 					}
@@ -52,9 +55,12 @@
 			});
 									
 			if (timerSetting.timeoutRun){
+				var currTime = new Date().getTime();
+				var timeToCall = Math.max(0, me.timeOutTime - (currTime - me.lastTime));
 				setTimeout(function(){
 					me.frameOutCall();
-				},me.timeOutTime);
+				},timeToCall);
+				me.lastTime = currTime + timeToCall;
 			}
 		},	
 	}

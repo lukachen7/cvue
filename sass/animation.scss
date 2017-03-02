@@ -1,3 +1,4 @@
+//导航PUSH动画
 .nav-push-enter-active {
   animation: nav-push-in $animation-speed;
 }
@@ -24,6 +25,7 @@
 //  opacity: .5;
   }
 }
+//导航POP动画
 .nav-pop-enter-active {
 //animation: nav-pop-in 0s;
 }
@@ -48,5 +50,56 @@
   100% {
       @include transform-set(translateX(100%));  
 //  opacity: .5;
+  }
+}
+//modal出现消失动画
+.modal-list-enter-active {
+  animation: modal-list-in $animation-speed;
+}
+.modal-list-leave-active {
+  animation: modal-list-out $animation-speed;
+}
+.modal-list-move {
+  transition: transform $animation-speed;
+}
+@keyframes modal-list-in {
+  0% {
+    opacity: 0;
+    transform: translateY(-30px);
+  }
+  100% {
+    opacity: 1.0;
+  }
+}
+@keyframes modal-list-out {
+  0% {
+    opacity: 1.0;
+  }
+  100% {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+}
+//渐现渐隐动画
+.fade-enter-active {
+  animation: fade-in $animation-speed;
+}
+.fade-leave-active {
+  animation: fade-out $animation-speed;
+}
+@keyframes fade-in {
+  0% { 
+    opacity: 0;
+  }
+  100% {
+    opacity: 1.0;
+  }
+}
+@keyframes fade-out {
+  0% {
+    opacity: 1.0;
+  }
+  100% { 
+    opacity: 0;
   }
 }

@@ -1,9 +1,11 @@
 require(['vue','fastclick','servicePath/rule','servicePath/timer','modulePath/test/app',
-'common/component/cv-nav/cv-nav',
-'common/component/cv-scroll/cv-scroll',
-'common/component/cv-slider/cv-slider',
+'componentPath/cv-nav/cv-nav',
+'componentPath/cv-modal/cv-modal',
+'componentPath/cv-scroll/cv-scroll',
+'componentPath/cv-slider/cv-slider',
 'modulePath/test/testpage',
-'modulePath/test/testpage2'],
+'modulePath/test/testpage2',
+'modulePath/test/testmodal'],
 function(Vue,FastClick,rule,timer,app){
 	var root = new Vue({
 	  el: '#demo',
@@ -16,5 +18,10 @@ function(Vue,FastClick,rule,timer,app){
 	setTimeout(function(){
 		timer.removeFrameOutCall(timeOutKey);
 	},10000);
+	setTimeout(function(){
+		root.$refs.rootModal.showModal("testmodal",true);
+	},3000);
+	
 	app.root=root;
+	app.rootModal = root.$refs.rootModal;
 });

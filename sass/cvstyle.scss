@@ -6,7 +6,7 @@ html{
 body{
     font-family: "微软雅黑";
     height:100%;
-    background-color: #CCCCCC;
+    background-color: $light-grey;
     text-align:center;}
 *{
     padding:0;
@@ -27,8 +27,49 @@ img{border:0}
     width: 100%;
     top: 0px;
     bottom: 0px;
-    background-color: #ffffff;
+    background-color: $vi-background-color;
     overflow: hidden;
+}
+/*
+ * cv-modal容器默认样式
+ */
+.cv-modal-container{
+    position: absolute;
+    z-index: 1000;
+    width: 100%;
+    top: -30px;
+    bottom: -30px;
+    overflow: hidden;
+}
+// * cv-modal默认样式
+.cv-modal{
+    position: absolute;
+    width: 100%;
+    top: 0px;
+    bottom: 0px;
+    background-color: rgba(0,0,0,0.4);
+    overflow: hidden;
+}
+.cv-modal-panel{
+    position: absolute;
+    z-index: 1000;
+    left:5%;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 90%;
+    min-height: 200px;
+    background-color: $vi-background-color;
+}
+.cv-modal-close{
+    position: absolute;
+    z-index: 1000;
+    width: 40px;
+    height: 40px;
+    background-color: $light-grey;
+    border: none;
+    border-radius: 50%;
+    top: 5px;
+    right: 5px;
 }
 /*
  * cv-scroll容器默认样式
@@ -37,12 +78,12 @@ img{border:0}
     position: relative;
     width: 100%;
     height: 200px;
-    background-color: #ffffff;
+    background-color: $vi-background-color;
     overflow: hidden;
 }
 /*
  * cv-slider控件默认样式
- */
+ */ 
 .cv-slider-container{
     position: relative;
     width: 100%;
@@ -58,10 +99,22 @@ img{border:0}
     @include user-select-set(none);
 }
 .cv-slider-item{
-    display: inline-block; 
+    display: inline-block;
     >img{
         width: 100%;
     }
+}
+/*
+ * cv-loading样式
+ */
+.cv-loading-container{
+    position: absolute;
+    z-index: 10000;
+    width: 100%;
+    top: 0;
+    bottom: 0;
+    background-color: rgba(0,0,0,0.4);
+    overflow: hidden;
 }
 /**
  * 上下拉刷新 styles

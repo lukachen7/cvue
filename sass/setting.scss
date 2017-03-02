@@ -1,20 +1,35 @@
-//亮灰色
+// * 各级面板z-index说明
+// * 由于部分z-index要在JS里设置，所以不要随便改动
+// * nav等主内容面板：100
+// * 侧边或下边弹出副内容面板：300
+// * modal等弹出层：1000
+// * loading提示层：10000
+// * toast提示层10000以上
+$main-content-base-z-index:100;
+$deputy-content-base-z-index:300;
+$modal-content-base-z-index:1000;
+$loading-base-z-index:10000;
+$toast-base-z-index:10001;
+// * 常用颜色
 $light-grey:#cccccc;
-//动画速度
+$dark-grey:#333333;
+$white:#ffffff;
+$black:#000000;
+$red:#ff0000;
+$yellow:#ffff00;
+$orange:#ff9900;
+$green:#009900;
+$blue:#0099ff;
+// * 主题颜色
+$vi-background-color:$white;
+$vi-text-color:$dark-grey;
+// * 动画速度
 $animation-speed:.3s;
-
-
-/*
- * ios平台专有设置
- */
+// * ios平台专有设置
 $ios-status-height:20px;
-/*
- * android平台专有设置
- */
+// * android平台专有设置
 $android-status-height:0px;
-/*
- * 兼容设置
- */
+// * 兼容设置
 @mixin appearance-set($style){
     -webkit-appearance: $style;
     -moz-appearance: $style;

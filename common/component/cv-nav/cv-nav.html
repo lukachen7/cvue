@@ -1,6 +1,8 @@
 <transition v-bind:name="effect" mode="in-out">
   <component 
-  	v-bind:is="currentContent" 
+  	v-bind:is="currentContent.contentClass" 
+  	v-bind:content-id="currentContent.contentId" 
+  	v-bind:param="currentContent.param" 
   	v-bind:style="{zIndex:100+navList.length}"
   	v-on:navPush="navPush" 
   	v-on:navBack="navBack" 

@@ -1,10 +1,4 @@
 @charset "UTF-8";
-/*
- * ios平台专有设置
- */
-/*
- * android平台专有设置
- */
 .nav-push-enter-active {
   animation: nav-push-in 0.3s; }
 
@@ -63,13 +57,50 @@
     -ms-transform: translateX(100%);
     -o-transform: translateX(100%);
     transform: translateX(100%); } }
+.modal-list-enter-active {
+  animation: modal-list-in 0.3s; }
+
+.modal-list-leave-active {
+  animation: modal-list-out 0.3s; }
+
+.modal-list-move {
+  transition: transform 0.3s; }
+
+@keyframes modal-list-in {
+  0% {
+    opacity: 0;
+    transform: translateY(-30px); }
+  100% {
+    opacity: 1.0; } }
+@keyframes modal-list-out {
+  0% {
+    opacity: 1.0; }
+  100% {
+    opacity: 0;
+    transform: translateY(30px); } }
+.fade-enter-active {
+  animation: fade-in 0.3s; }
+
+.fade-leave-active {
+  animation: fade-out 0.3s; }
+
+@keyframes fade-in {
+  0% {
+    opacity: 0; }
+  100% {
+    opacity: 1.0; } }
+@keyframes fade-out {
+  0% {
+    opacity: 1.0; }
+  100% {
+    opacity: 0; } }
 html {
   height: 100%; }
 
 body {
   font-family: "微软雅黑";
   height: 100%;
-  background-color: #CCCCCC;
+  background-color: #cccccc;
   text-align: center; }
 
 * {
@@ -104,6 +135,49 @@ img {
   overflow: hidden; }
 
 /*
+ * cv-modal容器默认样式
+ */
+.cv-modal-container {
+  position: absolute;
+  z-index: 1000;
+  width: 100%;
+  top: -30px;
+  bottom: -30px;
+  overflow: hidden; }
+
+/*
+ * cv-modal默认样式
+ */
+.cv-modal {
+  position: absolute;
+  width: 100%;
+  top: 0px;
+  bottom: 0px;
+  background-color: rgba(0, 0, 0, 0.4);
+  overflow: hidden; }
+
+.cv-modal-panel {
+  position: absolute;
+  z-index: 1000;
+  left: 5%;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 90%;
+  min-height: 200px;
+  background-color: #ffffff; }
+
+.cv-modal-close {
+  position: absolute;
+  z-index: 1000;
+  width: 40px;
+  height: 40px;
+  background-color: #cccccc;
+  border: none;
+  border-radius: 50%;
+  top: 5px;
+  right: 5px; }
+
+/*
  * cv-scroll容器默认样式
  */
 .cv-scroll-container {
@@ -136,20 +210,10 @@ img {
   -moz-user-select: none;
   -ms-user-select: none;
   -o-user-select: none;
-  user-select: none;
-  -webkit-text-size-adjust: none;
-  -moz-text-size-adjust: none;
-  -ms-text-size-adjust: none;
-  -o-text-size-adjust: none;
-  text-size-adjust: none; }
+  user-select: none; }
 
 .cv-slider-item {
-  display: inline-block;
-  -webkit-text-size-adjust: none;
-  -moz-text-size-adjust: none;
-  -ms-text-size-adjust: none;
-  -o-text-size-adjust: none;
-  text-size-adjust: none; }
+  display: inline-block; }
   .cv-slider-item > img {
     width: 100%; }
 
