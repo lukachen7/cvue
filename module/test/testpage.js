@@ -1,4 +1,4 @@
-define(["vue","servicePath/rule",'servicePath/timer',"text!modulePath/test/testpage.html"],function(Vue,rule,timer,template) {
+define(["vue","servicePath/rule",'servicePath/timer',"text!modulePath/test/testpage.html","modulePath/test/app"],function(Vue,rule,timer,template,app) {
   // 这里是模块的代码
   var page = {
     template:template,
@@ -29,6 +29,9 @@ define(["vue","servicePath/rule",'servicePath/timer',"text!modulePath/test/testp
 		"pullUpAction":function(component){	
 			component.scrollRefresh();
 		},
+		"loadingTest":function (){
+			app.rootLoading.showLoading();
+    		},
     },
   }
   Vue.component("testpage1",page);

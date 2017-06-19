@@ -3,6 +3,7 @@ require(['vue','fastclick','servicePath/rule','servicePath/timer','modulePath/te
 'componentPath/cv-modal/cv-modal',
 'componentPath/cv-scroll/cv-scroll',
 'componentPath/cv-slider/cv-slider',
+'componentPath/cv-loading/cv-loading',
 'modulePath/test/testpage',
 'modulePath/test/testpage2',
 'modulePath/test/testmodal'],
@@ -24,4 +25,5 @@ function(Vue,FastClick,rule,timer,app){
 	
 	app.root=root;
 	app.rootModal = root.$refs.rootModal;
+	app.rootLoading = root.$refs.rootLoading;
 });

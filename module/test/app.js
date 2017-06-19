@@ -3,5 +3,6 @@ define( ['underscore'],function(_) {
 	return {
 		root:null,
 		rootModal:null,
+		rootLoading:null
 	}
 });

@@ -113,8 +113,27 @@ img{border:0}
     width: 100%;
     top: 0;
     bottom: 0;
-    background-color: rgba(0,0,0,0.4);
+    background-color: rgba(0,0,0,0.2);
     overflow: hidden;
+}
+.cv-loading-default{
+    position: absolute;
+    display:block;
+    z-index: 10001;
+    left:50%;
+    top: 50%;
+    width: 60px;
+    height: 60px;
+    margin: -30px 0 0 -30px;
+    background:url(../img/root-loading.png) 0 0 no-repeat;
+    -webkit-background-size:60px 60px; background-size:60px 60px;
+    -webkit-transition-property:-webkit-transform;
+    -webkit-transform:rotate(0deg) translateZ(0) ;
+    -webkit-transition-duration:0ms;
+    -webkit-animation-name:loading;
+    -webkit-animation-duration:2s;
+    -webkit-animation-iteration-count:infinite;
+    -webkit-animation-timing-function:linear;
 }
 /**
  * 上下拉刷新 styles

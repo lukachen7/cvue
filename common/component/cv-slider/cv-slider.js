@@ -6,7 +6,7 @@ function(Vue,$,iScroll,timer,template) {
     data:function(){
       return {
       	iscroll:null,
-      	sliderTimeOutKey:''
+      	sliderTimeOutKey:null
       }
     },
     props:['autoPlay'],
@@ -53,8 +53,9 @@ function(Vue,$,iScroll,timer,template) {
     			this.iscroll.destroy();
     			this.iscroll=null;
     		}
-    		if(this.sliderTimeOutKey != ""){
+    		if(this.sliderTimeOutKey != null){
     			timer.removeFrameOutCall(this.sliderTimeOutKey);
+    			this.sliderTimeOutKey = null;
     		}
     },
     components:{    		
