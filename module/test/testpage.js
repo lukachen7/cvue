@@ -1,4 +1,4 @@
-define(["vue","servicePath/rule",'servicePath/timer',"text!modulePath/test/testpage.html","modulePath/test/app"],function(Vue,rule,timer,template,app) {
+define(["vue","toastr","servicePath/rule",'servicePath/timer',"text!modulePath/test/testpage.html","modulePath/test/app"],function(Vue,toastr,rule,timer,template,app) {
   // 这里是模块的代码
   var page = {
     template:template,
@@ -31,6 +31,10 @@ define(["vue","servicePath/rule",'servicePath/timer',"text!modulePath/test/testp
 		},
 		"loadingTest":function (){
 			app.rootLoading.showLoading();
+			setTimeout(function(){
+				app.rootLoading.hideLoading();
+				toastr.success("顺利隐藏");
+			},5000);
     		},
     },
   }

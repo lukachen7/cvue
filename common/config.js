@@ -14,6 +14,7 @@ require.config({
         moment        : 'lib/moment.min',
 		tween         : 'lib/Tween',
 		fastclick     : 'lib/fastclick',
+		toastr        : 'lib/toastr.min',
 		//路径
 		componentPath : 'common/component',
 		servicePath   : 'common/service',
