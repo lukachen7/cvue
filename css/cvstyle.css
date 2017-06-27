@@ -57,22 +57,22 @@
     -ms-transform: translateX(100%);
     -o-transform: translateX(100%);
     transform: translateX(100%); } }
-.modal-list-enter-active {
-  animation: modal-list-in 0.3s; }
+.move-fade-enter-active {
+  animation: move-fade-in 0.3s; }
 
-.modal-list-leave-active {
-  animation: modal-list-out 0.3s; }
+.move-fade-leave-active {
+  animation: move-fade-out 0.3s; }
 
-.modal-list-move {
+.move-fade-move {
   transition: transform 0.3s; }
 
-@keyframes modal-list-in {
+@keyframes move-fade-in {
   0% {
     opacity: 0;
     transform: translateY(-30px); }
   100% {
     opacity: 1.0; } }
-@keyframes modal-list-out {
+@keyframes move-fade-out {
   0% {
     opacity: 1.0; }
   100% {
@@ -141,21 +141,30 @@ img {
   position: absolute;
   z-index: 1000;
   width: 100%;
-  top: -30px;
-  bottom: -30px;
+  top: 0;
+  bottom: 0;
   overflow: hidden; }
+
+.cv-modal-background {
+  position: absolute;
+  width: 100%;
+  top: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.3);
+  overflow: hidden;
+  z-index: 1001; }
 
 .cv-modal {
   position: absolute;
   width: 100%;
   top: 0px;
   bottom: 0px;
-  background-color: rgba(0, 0, 0, 0.4);
-  overflow: hidden; }
+  overflow: hidden;
+  z-index: 1001; }
 
 .cv-modal-panel {
   position: absolute;
-  z-index: 1000;
+  z-index: 1001;
   left: 5%;
   top: 50%;
   transform: translateY(-50%);

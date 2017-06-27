@@ -1,0 +1,15 @@
+<div>
+	<cv-modal-background v-bind:is-show="isShow"></cv-modal-background>
+	<transition 
+		v-bind:name="modalClass.modalEffect" 
+		v-on:after-leave="afterLeave" 
+		>
+		<component 
+		v-if="isShow" 
+	  	v-bind:is="modalClass.modalContent" 
+	  	v-bind:param="modalClass.param" 
+	  	v-bind:modal-id="modalClass.modalId" 
+	  	v-on:hideModal="hideModal" 
+	  	class="cv-modal"></component>
+	</transition>
+</div>

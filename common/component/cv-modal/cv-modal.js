@@ -26,13 +26,18 @@ function(Vue,$,template,_) {
     			 */
     			var me = this;
     			if (typeof modal == "string"){
-    				modal = {modalClass:modal,modalId:_.uniqueId("modal_")};
+    				modal = {modalClass:modal,modalId:_.uniqueId("modal_"),modalEffect:"modal-list"};
     			}else if(typeof modal == "object" && modal["modalClass"]){
     				modal.modalId = _.uniqueId("modal_");
     			}else{
     				console.log("无法识别参数");
+    				return;
+    			}
+    			if (!modal["modalEffect"]){
+    				modal["modalEffect"] = "modal-list";
     			}
     			me.modalList.push(modal);
+    			console.log("modal"+JSON.stringify(modal));
     			if (isOnly){
     				me.modalList.splice(0,(me.modalList.length-1));
     			}	
@@ -54,6 +59,26 @@ function(Vue,$,template,_) {
 	    		}else{
 	    			return true;
 	    		}
+	    },
+	    effect:function(){
+	    		var me = this;
+	    		if(me.modalList && me.modalList.length>0){
+	    			var lastModal = me.modalList[me.modalList.length-1];
+	    			if (lastModal["modalEffect"]){
+	    				return lastModal["modalEffect"];
+	    			}
+	    		}
+	    		return "modal-list"
+	    },
+	    containerEffect:function(){
+	    		var me = this;
+	    		if(me.modalList && me.modalList.length>0){
+	    			var firstModal = me.modalList[0];
+	    			if (firstModal["modalEffect"]){
+	    				return firstModal["modalEffect"];
+	    			}
+	    		}
+	    		return "modal-list";
 	    }
 	},
   }

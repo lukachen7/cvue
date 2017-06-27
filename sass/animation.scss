@@ -52,17 +52,17 @@
 //  opacity: .5;
   }
 }
-//modal出现消失动画
-.modal-list-enter-active {
-  animation: modal-list-in $animation-speed;
+//从上往下渐现渐隐动画
+.move-fade-enter-active {
+  animation: move-fade-in $animation-speed;
 }
-.modal-list-leave-active {
-  animation: modal-list-out $animation-speed;
+.move-fade-leave-active {
+  animation: move-fade-out $animation-speed;
 }
-.modal-list-move {
-  transition: transform $animation-speed;
+.move-fade-move {
+transition: transform $animation-speed;
 }
-@keyframes modal-list-in {
+@keyframes move-fade-in {
   0% {
     opacity: 0;
     transform: translateY(-30px);
@@ -71,7 +71,7 @@
     opacity: 1.0;
   }
 }
-@keyframes modal-list-out {
+@keyframes move-fade-out {
   0% {
     opacity: 1.0;
   }

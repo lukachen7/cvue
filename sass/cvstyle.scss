@@ -37,9 +37,19 @@ img{border:0}
     position: absolute;
     z-index: 1000;
     width: 100%;
-    top: -30px;
-    bottom: -30px;
+    top: 0;
+    bottom: 0;
     overflow: hidden;
+}
+// cv-modal背景
+.cv-modal-background{
+    position: absolute;
+    width: 100%;
+    top: 0;
+    bottom: 0;
+    background-color: rgba(0,0,0,0.3);
+    overflow: hidden;
+    z-index: 1001;
 }
 // * cv-modal默认样式
 .cv-modal{
@@ -47,12 +57,12 @@ img{border:0}
     width: 100%;
     top: 0px;
     bottom: 0px;
-    background-color: rgba(0,0,0,0.4);
     overflow: hidden;
+    z-index: 1001;
 }
 .cv-modal-panel{
     position: absolute;
-    z-index: 1000;
+    z-index: 1001;
     left:5%;
     top: 50%;
     transform: translateY(-50%);

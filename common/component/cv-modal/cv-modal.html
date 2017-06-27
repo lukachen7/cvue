@@ -1,13 +1,12 @@
-<transition v-if="modalIsShow" name="modal-list">
-	<transition-group name="modal-list" tag="div" class="cv-modal-container">
-		<component 
-		v-for="modal in modalList" 
-		v-bind:key="modal" 
-	  	v-bind:is="modal.modalClass" 
-	  	v-bind:modal-id="modal.modalId" 
-	  	v-bind:param="modal.param" 
-	  	v-bind:style="{zIndex:1000+modalList.length}" 
-	  	v-on:hideModal="hideModal" 
-	  	class="cv-modal"></component>
-	</transition-group>	
-</transition>
+<div v-if="modalIsShow" class="cv-modal-container">
+	<component 
+	v-for="modal in modalList" 
+	v-bind:key="modal" 
+	v-bind:modal-class="modal" 
+  	v-bind:is="modal.modalClass" 
+  	v-bind:modal-id="modal.modalId" 
+  	v-bind:param="modal.param" 
+  	v-bind:style="{zIndex:1000+modalList.indexOf(modal)}" 
+  	v-on:hideModal="hideModal" 
+  	></component>
+</div>

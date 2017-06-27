@@ -1,6 +1,8 @@
 require(['vue','fastclick','servicePath/rule','servicePath/timer','modulePath/test/app',
 'componentPath/cv-nav/cv-nav',
 'componentPath/cv-modal/cv-modal',
+'componentPath/cv-modal/cv-modal-background',
+'componentPath/cv-modal/cv-modal-default',
 'componentPath/cv-scroll/cv-scroll',
 'componentPath/cv-slider/cv-slider',
 'componentPath/cv-loading/cv-loading',
@@ -20,7 +22,7 @@ function(Vue,FastClick,rule,timer,app){
 		timer.removeFrameOutCall(timeOutKey);
 	},10000);
 	setTimeout(function(){
-		root.$refs.rootModal.showModal("testmodal",true);
+		root.$refs.rootModal.showModal({modalClass:"cv-modal-default",modalContent:"testmodal",param:{message:this.modalId},modalEffect:"fade"});
 	},3000);
 	
 	app.root=root;

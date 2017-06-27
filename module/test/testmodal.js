@@ -11,6 +11,7 @@ define(["vue","text!modulePath/test/testmodal.html","modulePath/test/app"],funct
      */
     props:["param","modalId"],
     mounted:function(){
+    		console.log(JSON.stringify(this.param) , this.modalId);
     },
     destroyed:function(){
     		console.log("destroyed");    		
@@ -26,10 +27,10 @@ define(["vue","text!modulePath/test/testmodal.html","modulePath/test/app"],funct
 	},
     methods:{
     		hideModal:function(){
-    			this.$emit("hideModal",this.modalId);
+    			this.$emit("hideModal");
     		},
     		openModal:function(){
-    			app.rootModal.showModal({modalClass:"testmodal",param:{message:this.modalId}});
+    			app.rootModal.showModal({modalClass:"cv-modal-default",modalContent:"testmodal",param:{message:this.modalId},modalEffect:"move-fade"});
     		}
     },
   }
