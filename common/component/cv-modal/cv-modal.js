@@ -33,6 +33,9 @@ function(Vue,$,template,_) {
     				console.log("无法识别参数");
     				return;
     			}
+    			if (!modal["modalClass"]){
+    				modal["modalClass"] = "cv-modal-default";
+    			}
     			if (!modal["modalEffect"]){
     				modal["modalEffect"] = "move-fade";
     			}

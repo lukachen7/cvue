@@ -94,6 +94,18 @@
     opacity: 1.0; }
   100% {
     opacity: 0; } }
+.bottom-push-enter-active {
+  animation: bottom-push-in 0.3s; }
+
+.bottom-push-leave-active {
+  animation: bottom-push-out 0.3s; }
+
+@keyframes bottom-push-in {
+  0% {
+    transform: translateY(100%); } }
+@keyframes bottom-push-out {
+  100% {
+    transform: translateY(100%); } }
 html {
   height: 100%; }
 
@@ -169,6 +181,15 @@ img {
   top: 50%;
   transform: translateY(-50%);
   width: 90%;
+  min-height: 200px;
+  background-color: #ffffff; }
+
+.cv-modal-panel2 {
+  position: absolute;
+  z-index: 1001;
+  left: 0;
+  bottom: 0;
+  width: 100%;
   min-height: 200px;
   background-color: #ffffff; }
 

@@ -8,7 +8,8 @@ require(['vue','fastclick','servicePath/rule','servicePath/timer','modulePath/te
 'componentPath/cv-loading/cv-loading',
 'modulePath/test/testpage',
 'modulePath/test/testpage2',
-'modulePath/test/testmodal'],
+'modulePath/test/testmodal',
+'modulePath/test/testmodal2'],
 function(Vue,FastClick,rule,timer,app){
 	var root = new Vue({
 	  el: '#demo',

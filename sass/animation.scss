@@ -103,3 +103,24 @@ transition: transform $animation-speed;
     opacity: 0;
   }
 }
+//下方推出动画
+.bottom-push-enter-active {
+  animation: bottom-push-in $animation-speed;
+}
+.bottom-push-leave-active {
+  animation: bottom-push-out $animation-speed;
+}
+@keyframes bottom-push-in {
+  0% { 
+    transform: translateY(100%);
+  }
+  100% {
+  }
+}
+@keyframes bottom-push-out {
+  0% {
+  }
+  100% { 
+    transform: translateY(100%);
+  }
+}
