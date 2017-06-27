@@ -18,7 +18,7 @@ define(["vue","text!modulePath/test/testpage2.html","modulePath/test/app"],funct
     },
     methods:{
     		showModal:function(){
-    			app.rootModal.showModal({modalClass:"cv-modal-default",modalContent:"testmodal",param:{message:"fkkkkkk"},modalEffect:"move-fade"});
+    			app.rootModal.showModal("testmodal");
     		}
     }
   }

@@ -11,7 +11,6 @@ define(["vue","jquery","text!componentPath/cv-modal/cv-modal-default.html","unde
     mounted:function(){
     		var me = this;
     		me.isShow = true;
-    		console.log(JSON.stringify(this.modalClass));
     },
     destroyed:function(){
     		console.log("destroyed");    		

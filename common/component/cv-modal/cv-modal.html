@@ -1,5 +1,6 @@
 <div v-if="modalIsShow" class="cv-modal-container">
 	<component 
+	ref="modals"
 	v-for="modal in modalList" 
 	v-bind:key="modal" 
 	v-bind:modal-class="modal" 

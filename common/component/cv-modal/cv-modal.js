@@ -16,17 +16,17 @@ function(Vue,$,template,_) {
     components:{
     },
     methods:{
-    		//isOnly时目前效果不加暂时不用
     		showModal:function(modal,isOnly){
     			/*
     			 * modal object属性说明
     			 * modalClass模版控件的名字 string
+    			 * modalContent模版内容的名字 string
     			 * modalId自动生成的ID string
     			 * param所带参数 object
     			 */
     			var me = this;
     			if (typeof modal == "string"){
-    				modal = {modalClass:modal,modalId:_.uniqueId("modal_"),modalEffect:"modal-list"};
+    				modal = {modalContent:modal,modalClass:"cv-modal-default",modalId:_.uniqueId("modal_"),modalEffect:"move-fade"};
     			}else if(typeof modal == "object" && modal["modalClass"]){
     				modal.modalId = _.uniqueId("modal_");
     			}else{
@@ -34,12 +34,13 @@ function(Vue,$,template,_) {
     				return;
     			}
     			if (!modal["modalEffect"]){
-    				modal["modalEffect"] = "modal-list";
+    				modal["modalEffect"] = "move-fade";
     			}
     			me.modalList.push(modal);
-    			console.log("modal"+JSON.stringify(modal));
     			if (isOnly){
-    				me.modalList.splice(0,(me.modalList.length-1));
+    				for(var i=0;i<me.modalList.length-1;i++){
+    					me.$refs.modals[i].isShow = false;
+    				}
     			}	
     		},
     		hideModal:function(modalId){
