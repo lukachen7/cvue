@@ -22,6 +22,9 @@ define(["vue","text!modulePath/test/testpage2.html","modulePath/test/app"],funct
     		},
     		showModal2:function(){
     			app.rootModal.showModal({modalClass:"cv-modal-default",modalContent:"testmodal2",param:{message:"message"},modalEffect:"bottom-push"});
+    		},
+    		showCalender:function(){
+    			app.rootModal.showModal({modalClass:"cv-modal-default",modalContent:"cv-calendar",param:null,modalEffect:"bottom-push"});
     		}
     }
   }

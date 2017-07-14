@@ -17,6 +17,7 @@ require.config({
 		toastr        : 'lib/toastr.min',
 		//路径
 		componentPath : 'common/component',
+		filterPath : 'common/filter',
 		servicePath   : 'common/service',
 		modulePath    : 'module'
     },

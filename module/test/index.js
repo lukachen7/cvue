@@ -1,4 +1,5 @@
 require(['vue','fastclick','servicePath/rule','servicePath/timer','modulePath/test/app',
+'filterPath/time-num',
 'componentPath/cv-nav/cv-nav',
 'componentPath/cv-modal/cv-modal',
 'componentPath/cv-modal/cv-modal-background',
@@ -6,6 +7,7 @@ require(['vue','fastclick','servicePath/rule','servicePath/timer','modulePath/te
 'componentPath/cv-scroll/cv-scroll',
 'componentPath/cv-slider/cv-slider',
 'componentPath/cv-loading/cv-loading',
+'componentPath/cv-calendar/cv-calendar',
 'modulePath/test/testpage',
 'modulePath/test/testpage2',
 'modulePath/test/testmodal',
@@ -22,9 +24,9 @@ function(Vue,FastClick,rule,timer,app){
 	setTimeout(function(){
 		timer.removeFrameOutCall(timeOutKey);
 	},10000);
-	setTimeout(function(){
-		root.$refs.rootModal.showModal({modalClass:"cv-modal-default",modalContent:"testmodal",param:{message:this.modalId},modalEffect:"fade"});
-	},3000);
+//	setTimeout(function(){
+//		root.$refs.rootModal.showModal({modalClass:"cv-modal-default",modalContent:"testmodal",param:{message:this.modalId},modalEffect:"fade"});
+//	},3000);
 	
 	app.root=root;
 	app.rootModal = root.$refs.rootModal;

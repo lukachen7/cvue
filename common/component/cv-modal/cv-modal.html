@@ -2,7 +2,7 @@
 	<component 
 	ref="modals"
 	v-for="modal in modalList" 
-	v-bind:key="modal" 
+	v-bind:key="modal.modalId" 
 	v-bind:modal-class="modal" 
   	v-bind:is="modal.modalClass" 
   	v-bind:modal-id="modal.modalId" 
