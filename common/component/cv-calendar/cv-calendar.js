@@ -1,5 +1,7 @@
 define(["vue","jquery","underscore","iscroll","text!componentPath/cv-calendar/cv-calendar.html"],function(Vue,$,_,iScroll,template) {
-  // 这里是模块的代码
+  /*
+   * 日期时间选择器
+   */
   var component = {
     template:template,
     data:function(){
@@ -34,7 +36,7 @@ define(["vue","jquery","underscore","iscroll","text!componentPath/cv-calendar/cv
     /*
      * param可能为null
      */
-    props:["param","modalId"],
+    props:["param"],
     mounted:function(){
     		var me = this;
     		if (me.param){
@@ -196,13 +198,13 @@ define(["vue","jquery","underscore","iscroll","text!componentPath/cv-calendar/cv
 			$(this.$refs.cvCalendarYears).scrollTop((Math.floor(tmpIndex/3)*tmpHeight));
     		},
     		hideModal:function(){
-    			this.$emit("hideModal");
+    			this.$emit("calendarComplete");
     		},
     		selectedDate:function(){
     			if(this.param && this.param.callBackFunc && typeof(this.param.callBackFunc) == "function"){
     				console.log(typeof(this.param.callBackFunc));
     				this.param.callBackFunc(this.calendarShowDate);
-    				this.$emit("hideModal");
+    				this.$emit("calendarComplete");
     			}
     		},
     		updateNewDate:function(newDate){

@@ -8,6 +8,9 @@
         factory( _ );
     }
 }(function(_){
+	/*
+	 * localStorage封装
+	 */
 
 	var Store = function(){
 		

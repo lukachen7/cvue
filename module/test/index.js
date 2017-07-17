@@ -11,7 +11,9 @@ require(['vue','fastclick','servicePath/rule','servicePath/timer','modulePath/te
 'modulePath/test/testpage',
 'modulePath/test/testpage2',
 'modulePath/test/testmodal',
-'modulePath/test/testmodal2'],
+'modulePath/test/testmodal2',
+'modulePath/test/calendarmodal1',
+'modulePath/test/calendarmodal2'],
 function(Vue,FastClick,rule,timer,app){
 	var root = new Vue({
 	  el: '#demo',

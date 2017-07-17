@@ -5,6 +5,10 @@
         factory( _ );
     }
 }(function(_) {
+	/*
+	 * 常用通用变量
+	 */
+	
 	console.log("service.rule loaded.");
 	var serverRoot = "";
 	return {

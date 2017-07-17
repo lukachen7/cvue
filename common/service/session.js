@@ -9,6 +9,9 @@
         factory( _ );
     }
 }(function(_){
+	/*
+	 * sessionStorage封装
+	 */
 
 	var Session = function(){
 		

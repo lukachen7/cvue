@@ -1,6 +1,8 @@
 define(["vue","jquery","text!componentPath/cv-modal/cv-modal.html","underscore"],
 function(Vue,$,template,_) {
-  // 控件的代码
+  /*
+   * 模态框控件（支持多效果，在显示内容CSS中控制）
+   */
   var component = {
     template:template,
     data:function(){

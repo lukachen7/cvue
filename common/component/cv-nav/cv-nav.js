@@ -1,6 +1,8 @@
 define(["vue","text!componentPath/cv-nav/cv-nav.html","underscore"],
 function(Vue,template,_) {
-  // 导航容器控件
+  /*
+   * 导航容器控件
+   */
   var component = {
     template:template,
     data:function(){

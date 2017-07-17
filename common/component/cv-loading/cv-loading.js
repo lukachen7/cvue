@@ -1,6 +1,8 @@
 define(["vue","jquery",'servicePath/timer',"text!componentPath/cv-loading/cv-loading.html","underscore"],
 function(Vue,$,timer,template,_) {
-  // 控件的代码
+  /*
+   * 加载动画控件
+   */
   var component = {
     template:template,
     data:function(){

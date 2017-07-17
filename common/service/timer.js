@@ -5,6 +5,9 @@
         factory( _ );
     }
 }(function(_) {
+	/*
+	 * timeout封装，用于减少timer事件侦听
+	 */
 	
 	console.log("service.timer loaded.");
 	var timerSetting = {

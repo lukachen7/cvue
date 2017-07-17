@@ -1,6 +1,8 @@
 define(["vue","iscroll","text!componentPath/cv-scroll/cv-scroll.html","componentPath/cv-scroll/cv-pull-down","componentPath/cv-scroll/cv-pull-up"],
 function(Vue,iScroll,template,cvPullDown,cvPullUp) {
-  // 控件的代码
+  /*
+   * 集成iscroll 自带上下拉刷新的控件
+   */
   var component = {
     template:template,
     data:function(){

@@ -1,6 +1,8 @@
 define(["vue","jquery","iscroll",'servicePath/timer',"text!componentPath/cv-slider/cv-slider.html"],
 function(Vue,$,iScroll,timer,template) {
-  // 控件的代码
+  /*
+   * 滑动焦点图控件 可放任何元素
+   */
   var component = {
     template:template,
     data:function(){

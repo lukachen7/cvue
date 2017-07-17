@@ -6,6 +6,10 @@
     }
 }(function($) {
 	'use strict';
+	/*
+	 * ajax请求封装
+	 */
+	
 	//onSuccess将收到的数据格式
 	function Response(){
 		//服务器发来数据

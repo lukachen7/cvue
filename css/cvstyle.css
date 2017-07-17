@@ -348,10 +348,6 @@ img {
  * cv-calendar样式
  */
 .cv-calendar-container {
-  position: absolute;
-  z-index: 1001;
-  left: 0;
-  bottom: 0;
   width: 100%;
   background-color: #ffffff; }
   .cv-calendar-container .cv-calendar-tabs {

@@ -6,6 +6,11 @@
     }
 }(function(_) {
 	'use strict';
+	/*
+	 * 一些公用方法封装
+	 */
+	
+	//function绑定this  使用方法：$('#confirm_btn').click(self.complete.bind(self));
 	Function.prototype.bind = function(obj) {
 	    var _this = this;
 	    return function() {
