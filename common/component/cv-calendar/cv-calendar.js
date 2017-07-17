@@ -1,4 +1,4 @@
-define(["vue","jquery","iscroll","text!componentPath/cv-calendar/cv-calendar.html"],function(Vue,$,iScroll,template) {
+define(["vue","jquery","underscore","iscroll","text!componentPath/cv-calendar/cv-calendar.html"],function(Vue,$,_,iScroll,template) {
   // 这里是模块的代码
   var component = {
     template:template,
@@ -63,27 +63,19 @@ define(["vue","jquery","iscroll","text!componentPath/cv-calendar/cv-calendar.htm
 				me.hourScroll = new IScroll(me.$refs.cvCalendarHours, {
 					scrollX: false,
 					scrollY: true,
-					momentum: false,
 					snap: 'li',
 					snapSpeed: 500,
-					keyBindings: true,
 				});	
-				me.hourScroll.on("scroll",function(){
-					if(this.currentPage){
-						var tmpDate = new Date(me.calendarShowDate.getTime());
-						tmpDate.setHours(parseInt(this.currentPage.pageY));
-    						me.updateNewDate(tmpDate)
-					}					
-				})
 				me.hourScroll.on("scrollEnd",function(){
 					if(this.currentPage){
+						var pageY = this.y/(this.maxScrollY/23);
 						var tmpDate = new Date(me.calendarShowDate.getTime());
-						tmpDate.setHours(parseInt(this.currentPage.pageY));
+						tmpDate.setHours(parseInt(pageY));
     						if(!me.updateNewDate(tmpDate)){
     							this.goToPage(0,me.calendarShowDate.getHours(),500,iScroll.utils.ease.circular);
     						}
 					}
-				})
+				});
 				me.hourScroll.goToPage(0,me.calendarShowDate.getHours(),500,iScroll.utils.ease.circular);
 			 }
 			 if(!me.minuteScroll){
@@ -91,27 +83,19 @@ define(["vue","jquery","iscroll","text!componentPath/cv-calendar/cv-calendar.htm
 	    			me.minuteScroll = new IScroll(me.$refs.cvCalendarMinutes, {
 					scrollX: false,
 					scrollY: true,
-					momentum: false,
 					snap: 'li',
 					snapSpeed: 500,
-					keyBindings: true,
 				});	
-				me.minuteScroll.on("scroll",function(){
-					if(this.currentPage){
-						var tmpDate = new Date(me.calendarShowDate.getTime());
-						tmpDate.setMinutes(parseInt(this.currentPage.pageY));
-    						me.updateNewDate(tmpDate)
-					}					
-				})
 				me.minuteScroll.on("scrollEnd",function(){
 					if(this.currentPage){
+						var pageY = this.y/(this.maxScrollY/59);
 						var tmpDate = new Date(me.calendarShowDate.getTime());
-						tmpDate.setMinutes(parseInt(this.currentPage.pageY));
+						tmpDate.setMinutes(parseInt(pageY));
     						if(!me.updateNewDate(tmpDate)){
     							this.goToPage(0,me.calendarShowDate.getMinutes(),500,iScroll.utils.ease.circular);
     						}
 					}
-				})
+				});
 				me.minuteScroll.goToPage(0,me.calendarShowDate.getMinutes(),500,iScroll.utils.ease.circular);
 			 }	    		
 		}else{
@@ -207,6 +191,13 @@ define(["vue","jquery","iscroll","text!componentPath/cv-calendar/cv-calendar.htm
     		},
     		hideModal:function(){
     			this.$emit("hideModal");
+    		},
+    		selectedDate:function(){
+    			if(this.param && this.param.callBackFunc && typeof(this.param.callBackFunc) == "function"){
+    				console.log(typeof(this.param.callBackFunc));
+    				this.param.callBackFunc(this.calendarShowDate);
+    				this.$emit("hideModal");
+    			}
     		},
     		updateNewDate:function(newDate){
     			if (newDate.getTime() >= this.calendarMinDate.getTime() && newDate.getTime() < this.calendarMaxDate.getTime()){

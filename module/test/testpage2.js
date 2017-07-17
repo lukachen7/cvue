@@ -1,4 +1,4 @@
-define(["vue","text!modulePath/test/testpage2.html","modulePath/test/app"],function(Vue,template,app) {
+define(["vue","moment","text!modulePath/test/testpage2.html","modulePath/test/app"],function(Vue,moment,template,app) {
   // 这里是模块的代码
   var page = {
     template:template,
@@ -9,13 +9,23 @@ define(["vue","text!modulePath/test/testpage2.html","modulePath/test/app"],funct
     			tmpList.push(i);
     		}
     		return {
-	        tmpList:tmpList
+	        tmpList:tmpList,
+	        selectedDate:null
 	    }
     },
     props:["param","contentId"],
     mounted:function(){
     		app.root.message="imTestpage2!"
     },
+    computed: {
+	    selectedDateStr:function(){
+	    		if (this.selectedDate){
+	    			var selectedMoment = moment(this.selectedDate);
+	    			return selectedMoment.format("YYYY-MM-DD HH:mm:ss");
+	    		}
+	    		return "选择时间";
+	    }
+	},
     methods:{
     		showModal:function(){
     			app.rootModal.showModal("testmodal");
@@ -24,7 +34,10 @@ define(["vue","text!modulePath/test/testpage2.html","modulePath/test/app"],funct
     			app.rootModal.showModal({modalClass:"cv-modal-default",modalContent:"testmodal2",param:{message:"message"},modalEffect:"bottom-push"});
     		},
     		showCalender:function(){
-    			app.rootModal.showModal({modalClass:"cv-modal-default",modalContent:"cv-calendar",param:null,modalEffect:"bottom-push"});
+    			app.rootModal.showModal({modalClass:"cv-modal-default",modalContent:"cv-calendar",param:{callBackFunc:this.selectDateCallBack,calendarShowDate:this.selectedDate?this.selectedDate:null},modalEffect:"bottom-push"});
+    		},
+    		selectDateCallBack:function(date){
+    			this.selectedDate = date;   			
     		}
     }
   }
