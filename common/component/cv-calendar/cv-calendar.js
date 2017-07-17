@@ -13,11 +13,17 @@ define(["vue","jquery","underscore","iscroll","text!componentPath/cv-calendar/cv
     		}
 		return {
 	      	statusEnum:["year","mouth","date","time"],
+	      	//打开时显示选择级别
 	    		showStatus:'year',
+	    		//打开时显示时间
 	        calendarShowDate:new Date(),
+	        //可选择最小时间,包括
 			calendarMinDate:new Date(0),
+			//可选择最大时间,不包括
 			calendarMaxDate:new Date(),
+			//12个月份显示效果，可切换其他语言
 			monthList:['一月','二月','三月','四月','五月','六月','七月','八月','九月','十月','十一月','十二月'],
+			//一周七天显示效果，可切换其他语言
 			weekList:['日','一','二','三','四','五','六'],
 			hourList:tmpHourList,
 			minuteList:tmpMinuteList,
@@ -232,6 +238,20 @@ define(["vue","jquery","underscore","iscroll","text!componentPath/cv-calendar/cv
       		if(me.showStatus != status){
 				me.showStatus = status;  			
       		}
+    		},
+    		checkDateIsDisable:function(year,month,date){
+    			var tmpDate = new Date(this.calendarShowDate.getTime());
+    			if (year != null){
+    				tmpDate.setFullYear(year);
+    			}else if (month != null){
+    				tmpDate.setMonth(month);
+    			}else if(date != null){
+    				tmpDate.setDate(date);
+    			}
+    			if (tmpDate.getTime() >= this.calendarMinDate.getTime() && tmpDate.getTime() < this.calendarMaxDate.getTime()){
+    				return false;
+    			}
+    			return true;
     		}
     },
   }

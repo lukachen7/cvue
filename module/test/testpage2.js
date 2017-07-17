@@ -34,7 +34,7 @@ define(["vue","moment","text!modulePath/test/testpage2.html","modulePath/test/ap
     			app.rootModal.showModal({modalClass:"cv-modal-default",modalContent:"testmodal2",param:{message:"message"},modalEffect:"bottom-push"});
     		},
     		showCalender:function(){
-    			app.rootModal.showModal({modalClass:"cv-modal-default",modalContent:"cv-calendar",param:{callBackFunc:this.selectDateCallBack,calendarShowDate:this.selectedDate?this.selectedDate:null},modalEffect:"bottom-push"});
+    			app.rootModal.showModal({modalClass:"cv-modal-default",modalContent:"cv-calendar",param:{callBackFunc:this.selectDateCallBack,calendarMinDate:new Date(500000000),calendarShowDate:this.selectedDate?this.selectedDate:null},modalEffect:"bottom-push"});
     		},
     		selectDateCallBack:function(date){
     			this.selectedDate = date;   			

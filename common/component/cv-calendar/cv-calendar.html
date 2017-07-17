@@ -5,12 +5,12 @@
 	</div>
 	<div ref="cvCalendarYears" class="cv-calendar-years-container" v-if="showStatus == statusEnum[0]">
 		<ul>
-			<li v-for="item in yearList" v-on:click="yearSelected(item)" v-bind:class="{ active:parseInt(item) == calendarShowDate.getFullYear() }">{{item}}</li>
+			<li v-for="item in yearList" v-on:click="yearSelected(item)" v-bind:class="{ active:parseInt(item) == calendarShowDate.getFullYear() , disable:checkDateIsDisable(item,null,null)}">{{item}}</li>
 		</ul>
 	</div>
 	<div class="cv-calendar-month-container" v-if="showStatus == statusEnum[1]">
 		<ul>
-			<li v-for="(item, index) in monthList" v-on:click="monthSelected(index)" v-bind:class="{ active:index == calendarShowDate.getMonth()}">{{item}}</li>
+			<li v-for="(item, index) in monthList" v-on:click="monthSelected(index)" v-bind:class="{ active:index == calendarShowDate.getMonth() , disable:checkDateIsDisable(null,index,null)}">{{item}}</li>
 		</ul>
 	</div>
 	<div class="cv-calendar-date-container" v-if="showStatus == statusEnum[2]">
@@ -21,7 +21,7 @@
 		</div>
 		<ul>	
 			<li v-for="item in prevDateList"><a class="disable">{{item | time-num}}</a></li>
-			<li v-for="(item, index) in dateList"><a v-on:click="dateSelected(index+1)" v-bind:class="{ active:(index+1) == calendarShowDate.getDate()}">{{item | time-num}}</a></li>
+			<li v-for="(item, index) in dateList"><a v-on:click="dateSelected(index+1)" v-bind:class="{ active:(index+1) == calendarShowDate.getDate() , disable:checkDateIsDisable(null,null,(index+1))}">{{item | time-num}}</a></li>
 		</ul>
 	</div>
 	<div class="cv-calendar-time-container" v-if="showStatus == statusEnum[3]">

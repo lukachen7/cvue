@@ -385,6 +385,10 @@ img {
       font-size: 16px;
       color: #0099ff;
       background-color: #ffffff; }
+      .cv-calendar-container .cv-calendar-years-container li.disable, .cv-calendar-container .cv-calendar-month-container li.disable {
+        color: #999999;
+        background-color: #ffffff;
+        pointer-events: none; }
       .cv-calendar-container .cv-calendar-years-container li.active, .cv-calendar-container .cv-calendar-month-container li.active {
         color: #ffffff;
         background-color: #0099ff; }
@@ -429,13 +433,13 @@ img {
           color: #333333;
           background-color: #ffffff;
           overflow: hidden; }
-          .cv-calendar-container .cv-calendar-date-container > ul > li > a.active {
-            color: #ffffff;
-            background-color: #0099ff; }
           .cv-calendar-container .cv-calendar-date-container > ul > li > a.disable {
             color: #999999;
             background-color: #ffffff;
             pointer-events: none; }
+          .cv-calendar-container .cv-calendar-date-container > ul > li > a.active {
+            color: #ffffff;
+            background-color: #0099ff; }
         .cv-calendar-container .cv-calendar-date-container > ul > li:nth-child(7n+1) {
           margin-left: 1%; }
         .cv-calendar-container .cv-calendar-date-container > ul > li:nth-child(7n+7) {

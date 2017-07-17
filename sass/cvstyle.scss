@@ -247,10 +247,15 @@ img{border:0}
             font-size: 16px;
             color: $blue;
             background-color: $white;
+            &.disable{
+                color: #999999;
+                background-color: $white;
+                pointer-events: none;
+            }
             &.active{
                 color: $white;
                 background-color: $blue;
-            }
+            }           
         }
     }
     .cv-calendar-month-container{
@@ -302,15 +307,15 @@ img{border:0}
                     color: $dark-grey;
                     background-color: $white;
                     overflow: hidden;
-                    &.active{
-                        color: $white;
-                        background-color: $blue;
-                    }
                     &.disable{
                         color: #999999;
                         background-color: $white;
                         pointer-events: none;
                     }
+                    &.active{
+                        color: $white;
+                        background-color: $blue;
+                    }                    
                 }
                 &:nth-child(7n+1){
                     margin-left: 1%;
