@@ -19,6 +19,10 @@
 	<cv-scroll ref="cvScroll2" :is-refresh="false" :is-load-more="false" v-on:pullDownAction="pullDownAction" v-on:pullUpAction="pullUpAction">
 		<div>scroll</div>
 		<div>scroll</div>
+		<div>
+			<cv-radio v-for="item in radioData" v-bind:key="item.value" v-model="radioPicked" v-bind:value="item.value" v-bind:label-text="item.labelText"></cv-radio>
+		</div>
+		<div>{{radioPicked}}</div>
 		<div>scroll</div>
 		<div>scroll</div>
 		<div>scroll</div>

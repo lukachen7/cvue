@@ -9,6 +9,7 @@ require(['vue','fastclick','servicePath/rule','servicePath/timer','modulePath/te
 'componentPath/cv-loading/cv-loading',
 'componentPath/cv-calendar/cv-calendar',
 'componentPath/cv-form/cv-checkbox',
+'componentPath/cv-form/cv-radio',
 'modulePath/test/testpage',
 'modulePath/test/testpage2',
 'modulePath/test/testmodal',

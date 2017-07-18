@@ -406,6 +406,7 @@ img{border:0}
             &:before{
                 content: '';
                 display: block;
+                @include box-sizing-set-border-box;
                 position: absolute;
                 width: 10px;
                 height: 10px;
@@ -420,6 +421,7 @@ img{border:0}
         }
         &:checked{
             &+.cv-checkbox-custom{
+                color: $blue;
                 &:before{
                     border-color: $blue;
                     border-top: none;
@@ -428,6 +430,53 @@ img{border:0}
                     height: 8px;
                     top: 5px;
                     -webkit-transform:rotate(-45deg) translateZ(0);
+                }
+            }
+        }
+    }   
+}
+
+/*
+ * 单选radio控件
+ */
+.cv-radio-container{
+    .cv-radio{
+        visibility: hidden;
+        width:0px;
+        height:0px;
+        display:none;
+        &+.cv-radio-custom{
+            cursor:pointer;
+            display:inline-block; 
+            position: relative;
+            white-space: nowrap; 
+            color: $dark-grey;
+            font-size: 14px;
+            height: auto;
+            line-height: 24px;
+            padding-left: 25px;
+            &:before{
+                content: '';
+                display: block;
+                @include box-sizing-set-border-box;
+                position: absolute;
+                width: 14px;
+                height: 14px;
+                left: 3px;
+                top: 5px;
+                margin: 0;
+                padding: 0;
+                border-radius: 7px;
+                border: 1px solid $dark-grey;     
+                -webkit-transition-property:-webkit-transform;
+                -webkit-transition-duration:300ms;            
+            }
+        }
+        &:checked{
+            &+.cv-radio-custom{
+                color: $blue;
+                &:before{                   
+                    border: 5px solid $blue;
                 }
             }
         }
