@@ -1,0 +1,4 @@
+<span class="cv-checkbox-container">
+	<input class="cv-checkbox" id="{{id}}" value="{{value}}" v-bind:class="{checked:checked}" type="checkbox" v-model="checked" v-on:change="$emit('change', checked)">
+	<label class="cv-checkbox-custom" for="{{id}}">{{labelText}}</label>
+</span>

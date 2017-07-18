@@ -383,3 +383,53 @@ img{border:0}
         }
     }
 }
+
+/*
+ * 多选checkbox控件
+ */
+.cv-checkbox-container{
+    .cv-checkbox{
+        visibility: hidden;
+        width:0px;
+        height:0px;
+        display:none;
+        &+.cv-checkbox-custom{
+            cursor:pointer;
+            display:inline-block; 
+            position: relative;
+            white-space: nowrap; 
+            color: $dark-grey;
+            font-size: 14px;
+            height: auto;
+            line-height: 24px;
+            padding-left: 25px;
+            &:before{
+                content: '';
+                display: block;
+                position: absolute;
+                width: 10px;
+                height: 10px;
+                left: 5px;
+                top: 7px;
+                margin: 0;
+                padding: 0;
+                border: 1px solid $dark-grey;     
+                -webkit-transition-property:-webkit-transform;
+                -webkit-transition-duration:300ms;            
+            }
+        }
+        &:checked{
+            &+.cv-checkbox-custom{
+                &:before{
+                    border-color: $blue;
+                    border-top: none;
+                    border-right: none;
+                    width: 16px;
+                    height: 8px;
+                    top: 5px;
+                    -webkit-transform:rotate(-45deg) translateZ(0);
+                }
+            }
+        }
+    }   
+}

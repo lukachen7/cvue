@@ -5,7 +5,8 @@ define(["vue","toastr","servicePath/rule",'servicePath/timer',"text!modulePath/t
     data:function(){
       return {
         clientPages:rule.clientPage,
-        myFrameOutKey:''
+        myFrameOutKey:'',
+        checkboxData:{checked:true,value:"value",labelText:"labeltext"}
       }
     },
     props:["param","contentId"],
