@@ -190,7 +190,7 @@ img {
   overflow: hidden;
   z-index: 1001; }
 
-.cv-modal-panel {
+.cv-modal-move-fade {
   position: absolute;
   z-index: 1001;
   left: 5%;
@@ -200,7 +200,7 @@ img {
   min-height: 200px;
   background-color: #ffffff; }
 
-.cv-modal-panel2 {
+.cv-modal-bottom-push {
   position: absolute;
   z-index: 1001;
   left: 0;

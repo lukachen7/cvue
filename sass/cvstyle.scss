@@ -60,7 +60,7 @@ img{border:0}
     overflow: hidden;
     z-index: 1001;
 }
-.cv-modal-panel{
+.cv-modal-move-fade{
     position: absolute;
     z-index: 1001;
     left:5%;
@@ -70,7 +70,7 @@ img{border:0}
     min-height: 200px;
     background-color: $vi-background-color;
 }
-.cv-modal-panel2{
+.cv-modal-bottom-push{
     position: absolute;
     z-index: 1001;
     left:0;
