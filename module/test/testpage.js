@@ -6,7 +6,9 @@ define(["vue","toastr","servicePath/rule",'servicePath/timer',"text!modulePath/t
       return {
         clientPages:rule.clientPage,
         myFrameOutKey:'',
-        checkboxData:{checked:true,value:"value",labelText:"labeltext"},
+        checkboxData:[{checked:true,value:"value1",labelText:"labeltext1"},
+        {checked:false,value:"value2",labelText:"labeltext2"},
+        {checked:false,value:"value3",labelText:"labeltext3"}],
         radioData:[{value:"aaa",labelText:"AAA"},{value:"bbb",labelText:"BBB"},{value:"ccc",labelText:"CCC"}],
         radioPicked:"aaa"
       }

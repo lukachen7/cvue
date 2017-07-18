@@ -4,8 +4,8 @@
 		<div>scroll</div>
 		<div>scroll</div>
 		<div>scroll</div>
-		<div><cv-checkbox v-model="checkboxData.checked" v-bind:value="checkboxData.value" v-bind:label-text="checkboxData.labelText" v-on:change="console.log('change')"></cv-checkbox>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;scrolltest</div>
-		<div>{{checkboxData.checked}}</div>
+		<div><cv-checkbox v-for="item in checkboxData" v-bind:key="item.value" v-model="item.checked" v-bind:value="item.value" v-bind:label-text="item.labelText" v-on:change="console.log('change')"></cv-checkbox></div>
+		<div><span v-for="item in checkboxData">{{item.checked}}&nbsp;&nbsp;</span></div>
 		<div>scroll</div>
 		<div>scroll</div>
 		<div>scroll</div>
