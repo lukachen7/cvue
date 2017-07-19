@@ -202,7 +202,6 @@ define(["vue","jquery","underscore","iscroll","text!componentPath/cv-calendar/cv
     		},
     		selectedDate:function(){
     			if(this.param && this.param.callBackFunc && typeof(this.param.callBackFunc) == "function"){
-    				console.log(typeof(this.param.callBackFunc));
     				this.param.callBackFunc(this.calendarShowDate);
     				this.$emit("calendarComplete");
     			}

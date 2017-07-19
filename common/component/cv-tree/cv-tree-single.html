@@ -1,9 +1,20 @@
-<!DOCTYPE html>
-<html>
-	<head>
-		<meta charset="UTF-8">
-		<title></title>
-	</head>
-	<body>
-	</body>
-</html>
+<div class="cv-tree-single-container">
+	<div class="selected-container">
+		<div class="selected-content">
+			<ul>
+				<li>已选择：</li>
+				<li><button class="item-btn selected" v-on:click="itemClick(null)">根目录</button>&nbsp;</li>
+				<li v-for="item in selectedList"><button class="item-btn selected" v-on:click="itemClick(item.itemValue)">{{item.itemText}}</button>&nbsp;</li>
+			</ul>
+		</div>
+	</div>
+	<div class="item-container">
+		<ul>
+			<li v-for="item in currentList"><button class="item-btn" v-bind:class="{selected:selectedItem && item.itemValue == selectedItem.itemValue}" v-on:click="itemClick(item.itemValue)">{{item.itemText}}</button></li>
+		</ul>
+	</div>
+	<div class="cv-tree-single-control">
+		<button class="cv-tree-single-control-button" v-on:click="selectedComplete">确定</button>
+		<button class="cv-tree-single-control-button" v-on:click="hideModal">取消</button>
+	</div>
+</div>

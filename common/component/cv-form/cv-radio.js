@@ -1,7 +1,7 @@
 define(["vue","jquery","text!componentPath/cv-form/cv-radio.html","underscore"],
 function(Vue,$,template,_) {
   /*
-   * 加载动画控件
+   * 单选radio控件
    */
   var component = {
     template:template,

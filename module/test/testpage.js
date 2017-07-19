@@ -40,7 +40,7 @@ define(["vue","toastr","servicePath/rule",'servicePath/timer',"text!modulePath/t
 				app.rootLoading.hideLoading();
 				toastr.success("顺利隐藏");
 			},5000);
-    		},
+    		}
     },
   }
   Vue.component("testpage1",page);

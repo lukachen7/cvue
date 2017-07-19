@@ -380,6 +380,9 @@ img{border:0}
             color: $white;
             float: left;
             font-size: 16px;
+            &:last-child{
+                border-left: 1px solid $white;
+            }
         }
     }
 }
@@ -481,4 +484,81 @@ img{border:0}
             }
         }
     }   
+}
+
+/*
+ * 单选树控件
+ */
+.cv-tree-single-container{
+    width: 100%;
+    background-color: $white; 
+    button.item-btn{
+        display: inline-block;
+        border: 1px solid $blue;
+        border-radius: 5px;
+        font-size: 16px;
+        color: $blue;
+        background-color: $white;
+        line-height: 20px;
+        padding: 2px 5px 2px 5px;
+        &.selected{
+            background-color: $blue;
+            color: $white;
+        }
+    }
+    >.selected-container{
+        width: 100%;
+        padding: 10px 10px 5px 10px;
+        border-bottom: 5px solid $blue;
+        >.selected-content{
+            width: 100%;
+            >ul{
+                height: auto;
+                overflow: auto;
+                >li{
+                    float: left;
+                    display: inline-block;
+                    padding: 5px;
+                    &:not(:last-child):not(:first-child):after{
+                        content: ">";
+                    }
+                    &:first-child{
+                        font-size: 16px;
+                        color: $blue;
+                        line-height: 26px;
+                    }
+                }
+            }
+        }
+    }
+    >.item-container{
+        width: 100%;
+        padding: 10px;
+        height: 200px;
+        overflow-y: scroll;
+        >ul{
+            height: auto;
+            overflow: auto;
+            >li{
+                float: left;
+                display: inline-block;
+                padding: 5px;
+            }
+        }
+    }
+    >.cv-tree-single-control{
+        width: 100%;
+        button.cv-tree-single-control-button{
+            border: none;
+            width: 50%;
+            height: 40px;
+            background-color: $blue;
+            color: $white;
+            float: left;
+            font-size: 16px;
+            &:last-child{
+                border-left: 1px solid $white;
+            }
+        }
+    }
 }

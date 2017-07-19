@@ -10,12 +10,14 @@ require(['vue','fastclick','servicePath/rule','servicePath/timer','modulePath/te
 'componentPath/cv-calendar/cv-calendar',
 'componentPath/cv-form/cv-checkbox',
 'componentPath/cv-form/cv-radio',
+'componentPath/cv-tree/cv-tree-single',
 'modulePath/test/testpage',
 'modulePath/test/testpage2',
 'modulePath/test/testmodal',
 'modulePath/test/testmodal2',
 'modulePath/test/calendarmodal1',
-'modulePath/test/calendarmodal2'],
+'modulePath/test/calendarmodal2',
+'modulePath/test/treemodal'],
 function(Vue,FastClick,rule,timer,app){
 	var root = new Vue({
 	  el: '#demo',

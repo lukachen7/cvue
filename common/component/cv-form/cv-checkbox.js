@@ -1,7 +1,7 @@
 define(["vue","jquery","text!componentPath/cv-form/cv-checkbox.html","underscore"],
 function(Vue,$,template,_) {
   /*
-   * 加载动画控件
+   * 多选checkbox控件
    */
   var component = {
     template:template,

@@ -487,6 +487,8 @@ img {
       color: #ffffff;
       float: left;
       font-size: 16px; }
+      .cv-calendar-container .cv-calendar-control button.cv-calendar-control-button:last-child {
+        border-left: 1px solid #ffffff; }
 
 /*
  * 多选checkbox控件
@@ -576,5 +578,67 @@ img {
     color: #0099ff; }
     .cv-radio-container .cv-radio:checked + .cv-radio-custom:before {
       border: 5px solid #0099ff; }
+
+/*
+ * 单选树控件
+ */
+.cv-tree-single-container {
+  width: 100%;
+  background-color: #ffffff; }
+  .cv-tree-single-container button.item-btn {
+    display: inline-block;
+    border: 1px solid #0099ff;
+    border-radius: 5px;
+    font-size: 16px;
+    color: #0099ff;
+    background-color: #ffffff;
+    line-height: 20px;
+    padding: 2px 5px 2px 5px; }
+    .cv-tree-single-container button.item-btn.selected {
+      background-color: #0099ff;
+      color: #ffffff; }
+  .cv-tree-single-container > .selected-container {
+    width: 100%;
+    padding: 10px 10px 5px 10px;
+    border-bottom: 5px solid #0099ff; }
+    .cv-tree-single-container > .selected-container > .selected-content {
+      width: 100%; }
+      .cv-tree-single-container > .selected-container > .selected-content > ul {
+        height: auto;
+        overflow: auto; }
+        .cv-tree-single-container > .selected-container > .selected-content > ul > li {
+          float: left;
+          display: inline-block;
+          padding: 5px; }
+          .cv-tree-single-container > .selected-container > .selected-content > ul > li:not(:last-child):not(:first-child):after {
+            content: ">"; }
+          .cv-tree-single-container > .selected-container > .selected-content > ul > li:first-child {
+            font-size: 16px;
+            color: #0099ff;
+            line-height: 26px; }
+  .cv-tree-single-container > .item-container {
+    width: 100%;
+    padding: 10px;
+    height: 200px;
+    overflow-y: scroll; }
+    .cv-tree-single-container > .item-container > ul {
+      height: auto;
+      overflow: auto; }
+      .cv-tree-single-container > .item-container > ul > li {
+        float: left;
+        display: inline-block;
+        padding: 5px; }
+  .cv-tree-single-container > .cv-tree-single-control {
+    width: 100%; }
+    .cv-tree-single-container > .cv-tree-single-control button.cv-tree-single-control-button {
+      border: none;
+      width: 50%;
+      height: 40px;
+      background-color: #0099ff;
+      color: #ffffff;
+      float: left;
+      font-size: 16px; }
+      .cv-tree-single-container > .cv-tree-single-control button.cv-tree-single-control-button:last-child {
+        border-left: 1px solid #ffffff; }
 
 /*# sourceMappingURL=cvstyle.css.map */
