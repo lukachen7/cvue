@@ -26,8 +26,10 @@ function(Vue,iScroll,template,cvPullDown,cvPullUp) {
 			startY:-pullDownOffset,
 			//必选
 			probeType:1,
+			//是否屏蔽默认事件（影响子级）
+			preventDefault:false,
 			//关闭鼠标事件
-			disableMouse:true,
+//			disableMouse:true,
 			//关闭指针事件
 //			disablePointer:true
 		});

@@ -3,9 +3,9 @@
 		<div>scroll</div>
 		<div>scroll</div>
 		<div>scroll</div>
-		<div>scroll</div>
-		<div><cv-checkbox v-for="item in checkboxData" v-bind:key="item.value" v-model="item.checked" v-bind:value="item.value" v-bind:label-text="item.labelText" v-on:change="console.log('change')"></cv-checkbox></div>
+		<div>scroll</div>		
 		<div><span v-for="item in checkboxData">{{item.checked}}&nbsp;&nbsp;</span></div>
+		<div><input type="checkbox" v-for="item in checkboxData" v-model="item.checked" v-bind:value="item.value"/></div>
 		<div>scroll</div>
 		<div>scroll</div>
 		<div>scroll</div>
@@ -36,4 +36,5 @@
 	</cv-scroll>
 	<button v-on:click="loadingTest()">loading测试</button>
 	<div>-----------我是分割线--------------</div>
+	<div><cv-checkbox v-for="item in checkboxData" v-bind:key="item.value" v-model="item.checked" v-bind:value="item.value" v-bind:label-text="item.labelText" v-on:change="console.log('change')"></cv-checkbox></div>
 </div>

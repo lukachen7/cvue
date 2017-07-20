@@ -11,9 +11,9 @@ function(Vue,$,template,_) {
       }
     },
     model: {
-    		prop: 'checked',
-    		event: 'change'
-  	},
+		prop: 'checked',
+		event: 'change'
+	},
   	props: {
     		checked: Boolean,
     		value: String,
