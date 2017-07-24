@@ -27,5 +27,5 @@
 	<button v-on:click="showCalender">{{selectedDateStr}}</button><br /><br />
 	<button v-on:click="showCalender2">{{selectedDateStr}}</button><br /><br />
 	<button v-on:click="showTree">{{singleItem?singleItem.itemText:'树选择'}}</button><br /><br />
-	<button v-on:click="showTreeMulti">多选树</button>
+	<button v-on:click="showTreeMulti">{{multiItemsStr && multiItemsStr !=""?multiItemsStr:'多选树'}}</button>
 </div>

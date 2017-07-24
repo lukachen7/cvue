@@ -23,7 +23,7 @@ function(Vue,$,template,_) {
     		this.treeItemList = this.param["treeItemList"];
     		if (me.param){
     			if(me.param["defaultSelectedItems"]){
-    				me.selectedItems = me.param["defaultSelectedItems"];   				
+    				me.selectedItems = _.clone(me.param["defaultSelectedItems"],true);   				
     			}
     			if(me.param["treeItemList"]){
     				me.initTree(me.param["treeItemList"]);
@@ -38,10 +38,17 @@ function(Vue,$,template,_) {
     			this.$emit("selectedComplete");
     		},
     		selectedComplete:function(){
-//  			if(this.param && this.param.callBackFunc && typeof(this.param.callBackFunc) == "function"){
-//  				this.param.callBackFunc(this.selectedItems);
+    			if(this.param && this.param.callBackFunc && typeof(this.param.callBackFunc) == "function"){
+    				var selectedItems = [];
+    				for(var i=0;i<this.treeItemList.length;i++){
+    					if(this.treeItemList[i]["checked"]){
+    						selectedItems.push(this.treeItemList[i]["itemValue"]);
+    					}
+    				}
+    				
+    				this.param.callBackFunc(selectedItems);
     				this.$emit("selectedComplete");
-//  			}
+    			}
     		},
     		itemClick:function(value){
     			var me = this;
@@ -121,7 +128,9 @@ function(Vue,$,template,_) {
 		checkIsSelected:function(value){
 			var me = this;
 			if (me.selectedItems && me.selectedItems.length>0){
+				console.log("++++"+value);
 				for(var i=0;i<me.selectedItems.length;i++){
+					console.log(me.selectedItems[i]["itemValue"]+"---"+value);
 					if(me.selectedItems[i]["itemValue"] == value){
 						return true;
 					}

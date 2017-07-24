@@ -47,6 +47,13 @@ define(["vue","moment","text!modulePath/test/testpage2.html","modulePath/test/ap
 	    			return selectedMoment.format("YYYY-MM-DD HH:mm:ss");
 	    		}
 	    		return "选择时间";
+	    },
+	    multiItemsStr:function(){
+	    		var tmpArr = [];
+	    		for(var i=0;i<this.multiItems.length;i++){
+	    			tmpArr.push(this.multiItems[i]["itemText"]);
+	    		}
+	    		return tmpArr.join(",");
 	    }
 	},
     methods:{
@@ -66,13 +73,23 @@ define(["vue","moment","text!modulePath/test/testpage2.html","modulePath/test/ap
     			app.rootModal.showModal({modalClass:"cv-modal-default",modalContent:"treemodal",param:{callBackFunc:this.selectSingleCallBack,treeItemList:this.tmpSingleTreeList,defaultSelectedItem:this.singleItem},modalEffect:"bottom-push"});
     		},
     		showTreeMulti:function(){
-    			app.rootModal.showModal({modalClass:"cv-modal-default",modalContent:"treemodal2",param:{treeItemList:this.tmpSingleTreeList},modalEffect:"move-fade"});
+    			app.rootModal.showModal({modalClass:"cv-modal-default",modalContent:"treemodal2",param:{callBackFunc:this.selectMultiCallBack,treeItemList:this.tmpSingleTreeList,defaultSelectedItems:this.multiItems},modalEffect:"move-fade"});
     		},
     		selectDateCallBack:function(date){
     			this.selectedDate = date;   			
     		},
     		selectSingleCallBack:function(item){
     			this.singleItem = item;   			
+    		},
+    		selectMultiCallBack:function(items){
+    			this.multiItems = [];
+    			for (var i=0;i<this.tmpSingleTreeList.length;i++){
+    				var tmpItem = this.tmpSingleTreeList[i];
+    				if (items.indexOf(tmpItem["itemValue"]) > -1){
+    					this.multiItems.push(tmpItem);
+    				}
+    			}
+    			console.log(JSON.stringify(this.multiItems));
     		}
     }
   }

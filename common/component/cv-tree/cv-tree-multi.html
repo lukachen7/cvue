@@ -6,7 +6,11 @@
 				<li><div><button class="item-btn selected" v-on:click="itemClick(null)">根目录</button>&nbsp;</div></li>
 				<li v-for="item in selectedList">
 					<div>
-						<cv-checkbox v-model="item.checked" label-text="选择"></cv-checkbox><button class="item-btn" v-bind:class="{selected:item.checked}" v-on:click="itemClick(item.itemValue)">{{item.itemText}}</button>&nbsp;
+						<span class="cv-checkbox-container">
+							<input class="cv-checkbox" v-bind:id="'checked_'+item.itemValue" v-bind:class="{checked:item.checked}" type="checkbox" v-model="item.checked">
+							<label class="cv-checkbox-custom" v-bind:for="'checked_'+item.itemValue">&nbsp;选择</label>
+						</span>
+						<button class="item-btn" v-bind:class="{selected:item.checked}" v-on:click="itemClick(item.itemValue)">{{item.itemText}}</button>&nbsp;
 					</div>
 				</li>
 			</ul>
@@ -15,7 +19,11 @@
 	<div class="item-container">
 		<ul>
 			<li v-for="item in currentList">
-				<cv-checkbox v-model="item.checked" label-text="选择"></cv-checkbox><button class="item-btn" v-bind:class="{selected:item.checked}" v-on:click="itemClick(item.itemValue)">{{item.itemText}}</button>
+				<span class="cv-checkbox-container">
+					<input class="cv-checkbox" v-bind:id="'checked_'+item.itemValue" v-bind:class="{checked:item.checked}" type="checkbox" v-model="item.checked">
+					<label class="cv-checkbox-custom" v-bind:for="'checked_'+item.itemValue">&nbsp;选择</label>
+				</span>
+				<button class="item-btn" v-bind:class="{selected:item.checked}" v-on:click="itemClick(item.itemValue)">{{item.itemText}}</button>
 			</li>
 		</ul>
 	</div>
