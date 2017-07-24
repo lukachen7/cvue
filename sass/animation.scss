@@ -1,9 +1,19 @@
 //导航PUSH动画
 .nav-push-enter-active {
-  animation: nav-push-in $animation-speed;
+  @include animation-set(nav-push-in $animation-speed);
 }
 .nav-push-leave-active {
 //animation: nav-pop-out 0;
+}
+@-webkit-keyframes nav-push-in {
+  0% {
+      @include transform-set(translateX(100%));    
+//  opacity: .5;
+  }
+  100% {
+      @include transform-set(translateX(0));  
+//  opacity: 1.0;
+  }
 }
 @keyframes nav-push-in {
   0% {
@@ -13,6 +23,16 @@
   100% {
       @include transform-set(translateX(0));  
 //  opacity: 1.0;
+  }
+}
+@-webkit-keyframes nav-push-out {
+  0% {
+      @include transform-set(translateX(0));  
+//  opacity: 1.0;
+  }
+  100% {
+      @include transform-set(translateX(-100%));  
+//  opacity: .5;
   }
 }
 @keyframes nav-push-out {
@@ -30,7 +50,27 @@
 //animation: nav-pop-in 0s;
 }
 .nav-pop-leave-active {
-  animation: nav-pop-out $animation-speed;
+  @include animation-set(nav-pop-out $animation-speed);
+}
+@-webkit-keyframes nav-pop-in {
+  0% {
+      @include transform-set(translateX(-100%));  
+//  opacity: .5;
+  }
+  100% {
+      @include transform-set(translateX(0));  
+//  opacity: 1.0;
+  }
+}
+@-webkit-keyframes nav-pop-out {
+  0% {
+      @include transform-set(translateX(0));  
+//  opacity: 1.0;
+  }
+  100% {
+      @include transform-set(translateX(100%));  
+//  opacity: .5;
+  }
 }
 @keyframes nav-pop-in {
   0% {
@@ -54,13 +94,31 @@
 }
 //从上往下渐现渐隐动画
 .move-fade-enter-active {
-  animation: move-fade-in $animation-speed;
+  @include animation-set(move-fade-in $animation-speed);
 }
 .move-fade-leave-active {
-  animation: move-fade-out $animation-speed;
+  @include animation-set(move-fade-out $animation-speed);
 }
 .move-fade-move {
 transition: transform $animation-speed;
+}
+@-webkit-keyframes move-fade-in {
+  0% {
+    opacity: 0;
+    @include transform-set(translateY(-30px)); 
+  }
+  100% {
+    opacity: 1.0;
+  }
+}
+@-webkit-keyframes move-fade-out {
+  0% {
+    opacity: 1.0;
+  }
+  100% {
+    opacity: 0;
+    @include transform-set(translateY(30px)); 
+  }
 }
 @keyframes move-fade-in {
   0% {
@@ -82,10 +140,26 @@ transition: transform $animation-speed;
 }
 //渐现渐隐动画
 .fade-enter-active {
-  animation: fade-in $animation-speed;
+  @include animation-set(fade-in $animation-speed);
 }
 .fade-leave-active {
-  animation: fade-out $animation-speed;
+  @include animation-set(fade-out $animation-speed);
+}
+@-webkit-keyframes fade-in {
+  0% { 
+    opacity: 0;
+  }
+  100% {
+    opacity: 1.0;
+  }
+}
+@-webkit-keyframes fade-out {
+  0% {
+    opacity: 1.0;
+  }
+  100% { 
+    opacity: 0;
+  }
 }
 @keyframes fade-in {
   0% { 
@@ -105,10 +179,24 @@ transition: transform $animation-speed;
 }
 //下方推出动画
 .bottom-push-enter-active {
-  animation: bottom-push-in $animation-speed;
+  @include animation-set(bottom-push-in $animation-speed);
 }
 .bottom-push-leave-active {
-  animation: bottom-push-out $animation-speed;
+  @include animation-set(bottom-push-out $animation-speed);
+}
+@-webkit-keyframes bottom-push-in {
+  0% { 
+      @include transform-set(translateY(100%)); 
+  }
+  100% {
+  }
+}
+@-webkit-keyframes bottom-push-out {
+  0% {
+  }
+  100% { 
+      @include transform-set(translateY(100%)); 
+  }
 }
 @keyframes bottom-push-in {
   0% { 
@@ -124,3 +212,4 @@ transition: transform $animation-speed;
       @include transform-set(translateY(100%)); 
   }
 }
+

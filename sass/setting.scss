@@ -49,6 +49,13 @@ $android-status-height:0px;
     -o-transform: $style;
     transform: $style;
 }
+@mixin animation-set($style){
+    -webkit-animation: $style;
+    -moz-animation: $style;
+    -ms-animation: $style;
+    -o-animation: $style;
+    animation: $style;
+}
 @mixin user-select-set($style){
     -webkit-user-select: $style;
     -moz-user-select: $style;

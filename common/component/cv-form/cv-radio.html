@@ -1,4 +1,4 @@
 <span class="cv-radio-container">
 	<input class="cv-radio" v-bind:id="id" v-bind:value="value" v-bind:class="{checked:picked == value}" type="radio" v-model="picked" v-on:change="$emit('change', value)">
-	<label class="cv-radio-custom" v-bind:for="id">{{labelText}}</label>
+	<label class="cv-radio-custom" v-bind:for="id">&nbsp;{{labelText}}</label>
 </span>

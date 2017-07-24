@@ -1,0 +1,26 @@
+<div class="cv-tree-multi-container">
+	<div class="selected-container">
+		<div class="selected-content">
+			<ul>
+				<li><div>位置：</div></li>
+				<li><div><button class="item-btn selected" v-on:click="itemClick(null)">根目录</button>&nbsp;</div></li>
+				<li v-for="item in selectedList">
+					<div>
+						<cv-checkbox v-model="item.checked" label-text="选择"></cv-checkbox><button class="item-btn" v-bind:class="{selected:item.checked}" v-on:click="itemClick(item.itemValue)">{{item.itemText}}</button>&nbsp;
+					</div>
+				</li>
+			</ul>
+		</div>
+	</div>
+	<div class="item-container">
+		<ul>
+			<li v-for="item in currentList">
+				<cv-checkbox v-model="item.checked" label-text="选择"></cv-checkbox><button class="item-btn" v-bind:class="{selected:item.checked}" v-on:click="itemClick(item.itemValue)">{{item.itemText}}</button>
+			</li>
+		</ul>
+	</div>
+	<div class="cv-tree-multi-control">
+		<button class="cv-tree-multi-control-button" v-on:click="selectedComplete">确定</button>
+		<button class="cv-tree-multi-control-button" v-on:click="hideModal">取消</button>
+	</div>
+</div>

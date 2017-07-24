@@ -65,7 +65,7 @@ img{border:0}
     z-index: 1001;
     left:5%;
     top: 50%;
-    transform: translateY(-50%);
+    @include transform-set(translateY(-50%));
     width: 90%;
     min-height: 200px;
     background-color: $vi-background-color;
@@ -391,6 +391,7 @@ img{border:0}
  * 多选checkbox控件
  */
 .cv-checkbox-container{
+    display: inline-block;
     .cv-checkbox{
         visibility: hidden;
         width:0px;
@@ -405,7 +406,8 @@ img{border:0}
             font-size: 14px;
             height: auto;
             line-height: 24px;
-            padding-left: 25px;
+            min-height: 24px;
+            padding-left: 14px;
             &:before{
                 content: '';
                 display: block;
@@ -457,7 +459,8 @@ img{border:0}
             font-size: 14px;
             height: auto;
             line-height: 24px;
-            padding-left: 25px;
+            min-height: 24px;
+            padding-left: 14px;
             &:before{
                 content: '';
                 display: block;
@@ -549,6 +552,94 @@ img{border:0}
     >.cv-tree-single-control{
         width: 100%;
         button.cv-tree-single-control-button{
+            border: none;
+            width: 50%;
+            height: 40px;
+            background-color: $blue;
+            color: $white;
+            float: left;
+            font-size: 16px;
+            &:last-child{
+                border-left: 1px solid $white;
+            }
+        }
+    }
+}
+
+/*
+ * 多选树控件
+ */
+.cv-tree-multi-container{
+    width: 100%;
+    background-color: $white; 
+    button.item-btn{
+        display: inline-block;
+        border: none;
+        font-size: 16px;
+        color: $dark-grey;
+        background-color: $white;
+        line-height: 20px;
+        padding: 2px 5px 2px 5px;
+        &.selected{
+            color: $blue;
+        }
+    }
+    >.selected-container{
+        width: 100%;
+        padding: 10px 10px 5px 10px;
+        border-bottom: 5px solid $blue;
+        >.selected-content{
+            width: 100%;
+            >ul{
+                height: auto;
+                overflow: auto;
+                >li{
+                    float: left;
+                    display: inline-block;
+                    white-space: nowrap;
+                    padding: 3px;
+                    >div{
+                        display: inline-block;
+                        padding: 3px;  
+                        border: 1px solid $blue;
+                        border-radius: 5px;
+                    }
+                    &:not(:last-child):not(:first-child):after{
+                        content: " >";
+                    }
+                    &:first-child{
+                        >div{
+                            font-size: 16px;
+                            color: $blue;
+                            line-height: 26px;
+                            border: none;
+                        }                        
+                    }
+                }
+            }
+        }
+    }
+    >.item-container{
+        width: 100%;
+        padding: 10px;
+        height: 200px;
+        overflow-y: scroll;
+        >ul{
+            height: auto;
+            overflow: auto;
+            >li{
+                float: left;
+                display: inline-block;
+                padding: 3px;
+                margin: 5px;
+                border: 1px solid $blue;
+                border-radius: 5px;
+            }
+        }
+    }
+    >.cv-tree-multi-control{
+        width: 100%;
+        button.cv-tree-multi-control-button{
             border: none;
             width: 50%;
             height: 40px;

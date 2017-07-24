@@ -11,13 +11,15 @@ require(['vue','fastclick','servicePath/rule','servicePath/timer','modulePath/te
 'componentPath/cv-form/cv-checkbox',
 'componentPath/cv-form/cv-radio',
 'componentPath/cv-tree/cv-tree-single',
+'componentPath/cv-tree/cv-tree-multi',
 'modulePath/test/testpage',
 'modulePath/test/testpage2',
 'modulePath/test/testmodal',
 'modulePath/test/testmodal2',
 'modulePath/test/calendarmodal1',
 'modulePath/test/calendarmodal2',
-'modulePath/test/treemodal'],
+'modulePath/test/treemodal',
+'modulePath/test/treemodal2'],
 function(Vue,FastClick,rule,timer,app){
 	var root = new Vue({
 	  el: '#demo',

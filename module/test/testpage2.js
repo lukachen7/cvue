@@ -30,7 +30,10 @@ define(["vue","moment","text!modulePath/test/testpage2.html","modulePath/test/ap
 	        {parentValue:"cccbbb",itemValue:"cccbbbaaa",itemText:"cccbbbAAA"},
 	        {parentValue:"cccbbb",itemValue:"cccbbbbbb",itemText:"cccbbbBBB"}	        
 	        ],
-	        singleItem:null
+	        singleItem:{parentValue:"cccbbb",itemValue:"cccbbbbbb",itemText:"cccbbbBBB"},
+	        multiItems:[{parentValue:"aaaaaa",itemValue:"aaaaaabbb",itemText:"aaaaaaBBB"},
+	        				{parentValue:"aaaaaaaaa",itemValue:"aaaaaaaaabbb",itemText:"aaaaaaaaaBBB"},
+	        				{parentValue:"cccbbb",itemValue:"cccbbbbbb",itemText:"cccbbbBBB"}]
 	    }
     },
     props:["param","contentId"],
@@ -59,8 +62,11 @@ define(["vue","moment","text!modulePath/test/testpage2.html","modulePath/test/ap
     		showCalender2:function(){
     			app.rootModal.showModal({modalClass:"cv-modal-default",modalContent:"calendarmodal2",param:{callBackFunc:this.selectDateCallBack,calendarMinDate:new Date(500000000),calendarShowDate:this.selectedDate?this.selectedDate:null},modalEffect:"move-fade"});
     		},
-    		"showTree":function(){
-    			app.rootModal.showModal({modalClass:"cv-modal-default",modalContent:"treemodal",param:{callBackFunc:this.selectSingleCallBack,treeItemList:this.tmpSingleTreeList},modalEffect:"bottom-push"});
+    		showTree:function(){
+    			app.rootModal.showModal({modalClass:"cv-modal-default",modalContent:"treemodal",param:{callBackFunc:this.selectSingleCallBack,treeItemList:this.tmpSingleTreeList,defaultSelectedItem:this.singleItem},modalEffect:"bottom-push"});
+    		},
+    		showTreeMulti:function(){
+    			app.rootModal.showModal({modalClass:"cv-modal-default",modalContent:"treemodal2",param:{treeItemList:this.tmpSingleTreeList},modalEffect:"move-fade"});
     		},
     		selectDateCallBack:function(date){
     			this.selectedDate = date;   			
