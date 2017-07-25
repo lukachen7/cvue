@@ -128,9 +128,7 @@ function(Vue,$,template,_) {
 		checkIsSelected:function(value){
 			var me = this;
 			if (me.selectedItems && me.selectedItems.length>0){
-				console.log("++++"+value);
 				for(var i=0;i<me.selectedItems.length;i++){
-					console.log(me.selectedItems[i]["itemValue"]+"---"+value);
 					if(me.selectedItems[i]["itemValue"] == value){
 						return true;
 					}

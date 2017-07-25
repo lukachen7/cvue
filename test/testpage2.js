@@ -1,4 +1,4 @@
-define(["vue","moment","text!modulePath/test/testpage2.html","modulePath/test/app"],function(Vue,moment,template,app) {
+define(["vue","moment","text!test/testpage2.html","test/app"],function(Vue,moment,template,app) {
   // 这里是模块的代码
   var page = {
     template:template,
@@ -89,7 +89,6 @@ define(["vue","moment","text!modulePath/test/testpage2.html","modulePath/test/ap
     					this.multiItems.push(tmpItem);
     				}
     			}
-    			console.log(JSON.stringify(this.multiItems));
     		}
     }
   }

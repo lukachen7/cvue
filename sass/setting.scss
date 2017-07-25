@@ -29,6 +29,10 @@ $animation-speed:.3s;
 $ios-status-height:20px;
 // * android平台专有设置
 $android-status-height:0px;
+// * 全局数量设置
+$nav-header-padding:7px;
+$nav-header-height:44px;
+
 // * 兼容设置
 @mixin appearance-set($style){
     -webkit-appearance: $style;

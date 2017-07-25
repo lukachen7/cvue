@@ -1,4 +1,4 @@
-define(["vue","text!modulePath/test/calendarmodal2.html","modulePath/test/app"],function(Vue,template,app) {
+define(["vue","text!test/treemodal2.html","test/app"],function(Vue,template,app) {
   // 这里是模块的代码
   var modal = {
     template:template,
@@ -25,11 +25,11 @@ define(["vue","text!modulePath/test/calendarmodal2.html","modulePath/test/app"],
 	    }
 	},
     methods:{
-    		calendarComplete:function(){
+    		selectedComplete:function(){
     			this.$emit("hideModal");
     		}
     },
   }
-  Vue.component("calendarmodal2",modal);
+  Vue.component("treemodal2",modal);
   return modal;
 });

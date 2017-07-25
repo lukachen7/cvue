@@ -1,5 +1,8 @@
 @import 'setting';
 @import 'animation';
+/*
+ * 全局和默认CSS
+ */
 html{
     height: 100%;
 }
@@ -15,6 +18,11 @@ body{
     @include box-sizing-set-border-box}
 ul,ol,li {list-style:none}
 img{border:0}
+.fl{float: left;}
+.fr{float: right;}
+/*
+ * 根容器
+ */
 .cv-main-container{
     width: 100%;
     height: 100%;
@@ -22,13 +30,39 @@ img{border:0}
 /*
  * cv-nav子页面容器默认样式
  */
-.cv-nav-content{
+.cv-nav-container{
     position: absolute;
     width: 100%;
     top: 0px;
     bottom: 0px;
     background-color: $vi-background-color;
     overflow: hidden;
+    >.cv-nav-header{
+        position: absolute;
+        top: 0px;
+        left: 0px;
+        width: 100%;
+        height: $nav-header-height;
+        z-index: 110;
+        padding: $nav-header-padding;
+        line-height: 30px;
+        text-align: center;
+        overflow: hidden;
+        background-color: $blue;
+        >span{
+            display: inline-block;
+            color: $white;
+        }
+        & + .cv-nav-content{
+            padding-top: $nav-header-height;
+        }
+    }
+    >.cv-nav-content{
+        position: absolute;
+        width: 100%;
+        top: 0px;
+        bottom: 0px;
+    }
 }
 /*
  * cv-modal容器默认样式
@@ -649,3 +683,5 @@ img{border:0}
         }
     }
 }
+
+@import 'platform';

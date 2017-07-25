@@ -250,6 +250,9 @@
     -ms-transform: translateY(100%);
     -o-transform: translateY(100%);
     transform: translateY(100%); } }
+/*
+ * 全局和默认CSS
+ */
 html {
   height: 100%; }
 
@@ -275,6 +278,15 @@ ul, ol, li {
 img {
   border: 0; }
 
+.fl {
+  float: left; }
+
+.fr {
+  float: right; }
+
+/*
+ * 根容器
+ */
 .cv-main-container {
   width: 100%;
   height: 100%; }
@@ -282,13 +294,35 @@ img {
 /*
  * cv-nav子页面容器默认样式
  */
-.cv-nav-content {
+.cv-nav-container {
   position: absolute;
   width: 100%;
   top: 0px;
   bottom: 0px;
   background-color: #ffffff;
   overflow: hidden; }
+  .cv-nav-container > .cv-nav-header {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 44px;
+    z-index: 110;
+    padding: 7px;
+    line-height: 30px;
+    text-align: center;
+    overflow: hidden;
+    background-color: #0099ff; }
+    .cv-nav-container > .cv-nav-header > span {
+      display: inline-block;
+      color: #ffffff; }
+    .cv-nav-container > .cv-nav-header + .cv-nav-content {
+      padding-top: 44px; }
+  .cv-nav-container > .cv-nav-content {
+    position: absolute;
+    width: 100%;
+    top: 0px;
+    bottom: 0px; }
 
 /*
  * cv-modal容器默认样式
@@ -846,5 +880,11 @@ img {
       font-size: 16px; }
       .cv-tree-multi-container > .cv-tree-multi-control button.cv-tree-multi-control-button:last-child {
         border-left: 1px solid #ffffff; }
+
+.iOS .cv-nav-container > .cv-nav-header {
+  padding-top: 27px;
+  height: 64px; }
+  .iOS .cv-nav-container > .cv-nav-header + .cv-nav-content {
+    padding-top: 64px; }
 
 /*# sourceMappingURL=cvstyle.css.map */

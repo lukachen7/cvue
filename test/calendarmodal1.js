@@ -1,4 +1,4 @@
-define(["vue","text!modulePath/test/testmodal2.html","modulePath/test/app"],function(Vue,template,app) {
+define(["vue","text!test/calendarmodal1.html","test/app"],function(Vue,template,app) {
   // 这里是模块的代码
   var modal = {
     template:template,
@@ -18,21 +18,18 @@ define(["vue","text!modulePath/test/testmodal2.html","modulePath/test/app"],func
     computed: {
 	    params:function(){
 	    		if(!this.param){
-	    			return {message:"no Message!"};
+	    			return null;
 	    		}else{
 	    			return this.param;
 	    		}
 	    }
 	},
     methods:{
-    		hideModal:function(){
+    		calendarComplete:function(){
     			this.$emit("hideModal");
-    		},
-    		openModal:function(){
-    			app.rootModal.showModal({modalClass:"cv-modal-default",modalContent:"testmodal",param:{message:this.modalId},modalEffect:"move-fade"});
     		}
     },
   }
-  Vue.component("testmodal2",modal);
+  Vue.component("calendarmodal1",modal);
   return modal;
 });

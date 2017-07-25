@@ -1,6 +1,6 @@
 require.config({
-    baseUrl: '../../',
-    urlArgs: 'v=1',
+    baseUrl: '../',
+    urlArgs: 'v=2',
     paths: {
         // require.js plugins
         text          : 'lib/requirejs/text',

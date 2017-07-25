@@ -1,4 +1,4 @@
-define(["vue","toastr","servicePath/rule",'servicePath/timer',"text!modulePath/test/testpage.html","modulePath/test/app"],function(Vue,toastr,rule,timer,template,app) {
+define(["vue","toastr","servicePath/rule",'servicePath/timer',"text!test/testpage.html","test/app"],function(Vue,toastr,rule,timer,template,app) {
   // 这里是模块的代码
   var page = {
     template:template,
