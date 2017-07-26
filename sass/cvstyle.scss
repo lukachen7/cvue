@@ -156,6 +156,12 @@ img{border:0}
     position: relative;
     width: 100%;
     overflow: hidden;
+    >div:last-child{
+        height: auto;
+        overflow: auto;
+        opacity: 0;
+        pointer-events: none;
+    }
 }
 .cv-slider-item-container{
     position: absolute;

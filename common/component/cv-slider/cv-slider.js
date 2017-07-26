@@ -15,15 +15,9 @@ function(Vue,$,iScroll,timer,template) {
     mounted:function(){
     		var me = this;
     		var firstItem = $(me.$el).find('.cv-slider-item').first();
-    		function resizeEl(){
-	    		if(firstItem){
-	    			$(me.$el).height(firstItem.height());
-	    			$(me.$el).find(".cv-slider-item-container").height(firstItem.height());
-	    			$(me.$el).find('.cv-slider-item').width($(me.$el).width());	    			
-	    		}
-    		}
+    		
     		function init(){
-    			resizeEl();
+    			me.resizeEl();
     			if (firstItem && !me.iscroll){
     				me.$el.addEventListener('touchmove', function (e) { e.preventDefault(); }, false);
 	    			me.iscroll = new IScroll(me.$el, {
@@ -46,8 +40,10 @@ function(Vue,$,iScroll,timer,template) {
 				});
     			}
     		}
-    		$(window).resize(resizeEl);
+    		$(window).resize(me.resizeEl);
     		init();
+    },
+    updated:function(){
     },
     destroyed:function(){
     		console.log("destroyed");
@@ -63,7 +59,16 @@ function(Vue,$,iScroll,timer,template) {
     components:{    		
     },
     methods:{
-    		
+    		resizeEl:function(){
+    			var me = this;
+    			var firstItem = $(me.$el).find('.cv-slider-item').first().html();
+	    		if(firstItem){
+//	    			$(me.$el).height(firstItem.height());
+//	    			console.log(firstItem,$(me.$el).height(),firstItem.height());
+	    			$(me.$el).append("<div>"+firstItem+"</div>");
+	    			$(me.$el).find('.cv-slider-item').width($(me.$el).width());	    			
+	    		}
+    		}
     },
   }
   Vue.component("cv-slider",component);

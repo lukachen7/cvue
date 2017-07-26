@@ -22,6 +22,7 @@ define( ['underscore','toastr'],function(_,toastr) {
 			sliderDemo:"slider-demo",
 			formDemo:"form-demo",
 			modalDemo:"modal-demo",
+			calendarDemo:"calendar-demo",
 			singleTreeDemo:"single-tree-demo",
 			multiTreeDemo:"multi-tree-demo",
 			loadingDemo:"loading-demo",

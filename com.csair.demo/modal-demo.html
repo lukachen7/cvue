@@ -1,0 +1,12 @@
+<div>
+	<div class="cv-nav-header">
+		<span class="left"><button class="nav-btn" v-on:click="$emit('navBack')">back</button></span>
+	 	模态框控件演示
+	</div>
+	<div class="cv-nav-content">
+		<cv-scroll :is-refresh="false" :is-load-more="false">
+			<button v-on:click="showModal('middle-modal')">居中渐显modal</button><br /><br />
+			<button>底部弹出modal</button><br /><br />
+		</cv-scroll>
+	</div>
+</div>

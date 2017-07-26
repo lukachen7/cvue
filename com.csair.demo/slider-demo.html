@@ -1,0 +1,19 @@
+<div>
+	<div class="cv-nav-header">
+		<span class="left"><button class="nav-btn" v-on:click="$emit('navBack')">back</button></span>
+	 	左右滑动焦点图控件
+	</div>
+	<div class="cv-nav-content">
+		<cv-scroll :is-refresh="false" :is-load-more="false">
+			不自动翻(图片DEMO)
+			<cv-slider>
+				<!--横排内容如果分行会有小间隔BUG-->
+				<div class="cv-slider-item"><img src="../img/ad_pic01.jpg"/></div><div class="cv-slider-item"><img src="../img/ad_pic02.jpg"/></div><div class="cv-slider-item"><img src="../img/ad_pic03.jpg"/></div>
+			</cv-slider>
+			自动翻（其他元素）
+			<cv-slider auto-play="true">
+				<div class="cv-slider-item"><button class="slider-demo-btn">aaa</button><button class="slider-demo-btn">bbb</button><button class="slider-demo-btn">ccc</button><button class="slider-demo-btn">ddd</button></div><div class="cv-slider-item"><button class="slider-demo-btn">aaa</button><button class="slider-demo-btn">bbb</button><button class="slider-demo-btn">ccc</button><button class="slider-demo-btn">ddd</button></div><div class="cv-slider-item"><button class="slider-demo-btn">aaa</button><button class="slider-demo-btn">bbb</button><button class="slider-demo-btn">ccc</button><button class="slider-demo-btn">ddd</button></div><div class="cv-slider-item"><button class="slider-demo-btn">aaa</button><button class="slider-demo-btn">bbb</button><button class="slider-demo-btn">ccc</button><button class="slider-demo-btn">ddd</button></div>
+			</cv-slider>
+		</cv-scroll>
+	</div>
+</div>

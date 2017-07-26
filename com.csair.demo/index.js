@@ -14,7 +14,10 @@ require(['vue','fastclick','servicePath/rule','servicePath/timer','com.csair.dem
 'componentPath/cv-tree/cv-tree-multi',
 'com.csair.demo/directory',
 'com.csair.demo/nav-demo',
-'com.csair.demo/scroll-demo'],
+'com.csair.demo/scroll-demo',
+'com.csair.demo/slider-demo',
+'com.csair.demo/modal-demo',
+'com.csair.demo/modal/middle-modal'],
 function(Vue,FastClick,rule,timer,app){
 	var root = new Vue({
 	  el: '#demo',
