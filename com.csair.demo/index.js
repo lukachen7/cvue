@@ -12,7 +12,9 @@ require(['vue','fastclick','servicePath/rule','servicePath/timer','com.csair.dem
 'componentPath/cv-form/cv-radio',
 'componentPath/cv-tree/cv-tree-single',
 'componentPath/cv-tree/cv-tree-multi',
-'com.csair.demo/directory'],
+'com.csair.demo/directory',
+'com.csair.demo/nav-demo',
+'com.csair.demo/scroll-demo'],
 function(Vue,FastClick,rule,timer,app){
 	var root = new Vue({
 	  el: '#demo',

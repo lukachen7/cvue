@@ -1,0 +1,15 @@
+<div>
+	<div class="cv-nav-header">
+		<span class="left"><button class="nav-btn" v-on:click="$emit('navBack')">back</button></span>
+	 	上下拉刷新演示
+	</div>
+	<div class="cv-nav-content">
+		<cv-scroll :is-refresh="true" :is-load-more="true" v-on:pullDownAction="pullDownAction" v-on:pullUpAction="pullUpAction">
+			<div class="scroll-demo-list">
+				<ul>
+					<li v-for="item in dataList">{{item}}</li>				
+				</ul>
+			</div>
+		</cv-scroll>
+	</div>
+</div>

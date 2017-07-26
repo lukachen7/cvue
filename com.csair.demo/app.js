@@ -15,6 +15,18 @@ define( ['underscore','toastr'],function(_,toastr) {
 	  "hideMethod": "fadeOut"
 	}
 	return {
+		//页面控件列表
+		clientPage:{
+			navDemo:"nav-demo",
+			scrollDemo:"scroll-demo",
+			sliderDemo:"slider-demo",
+			formDemo:"form-demo",
+			modalDemo:"modal-demo",
+			singleTreeDemo:"single-tree-demo",
+			multiTreeDemo:"multi-tree-demo",
+			loadingDemo:"loading-demo",
+			toastDemo:"toast-demo"
+		},
 		root:null,
 		rootModal:null,
 		rootLoading:null

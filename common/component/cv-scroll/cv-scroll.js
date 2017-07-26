@@ -6,8 +6,18 @@ function(Vue,iScroll,template,cvPullDown,cvPullUp) {
   var component = {
     template:template,
     data:function(){
+    		var me = this;
+    		var heightOffset = 0;
+    		if(me.isRefresh){
+    			heightOffset+=40;
+    		}
+    		if(me.isLoadMore){
+    			heightOffset+=40;
+    		}
       return {
       	iscroll:null,
+      	scrollAuto:0,
+      	heightOffset:heightOffset
       }
     },
     props:["isRefresh","isLoadMore"],
@@ -96,6 +106,15 @@ function(Vue,iScroll,template,cvPullDown,cvPullUp) {
 				me.iscroll.scrollTo(0, -pullDownOffset, 500, iScroll.utils.ease.circular);
 			}
 		})
+		
+		me.scrollAutoFunc();
+    },
+    updated:function(){
+    		var me = this;
+    		me.iscroll.refresh();
+    		if(me.$el.clientHeight != me.$refs["scrollContent"].clientHeight-me.heightOffset){
+    			me.scrollAutoFunc();
+    		}
     },
     destroyed:function(){
     		console.log("destroyed");
@@ -108,12 +127,13 @@ function(Vue,iScroll,template,cvPullDown,cvPullUp) {
     		"cv-pull-down":cvPullDown,
     		"cv-pull-up":cvPullUp
     },
+    computed: {
+	    
+	},
     methods:{
     		"scrollRefresh":function(){
-    			var me = this;
-    			setTimeout(function(){
-    				me.iscroll.refresh();
-    			},1000);	
+    			var me = this; 			
+    			me.iscroll.refresh();
     		},
     		"pullDownAction":function(){
     			this.$emit("pullDownAction",this)	;
@@ -121,6 +141,15 @@ function(Vue,iScroll,template,cvPullDown,cvPullUp) {
 		"pullUpAction":function(){	
 			this.$emit("pullUpAction",this);
 		},
+		"scrollAutoFunc":function(){
+	    		var me = this;
+	    		if(me.$refs.scrollContent){
+	    			var tmpHeight = me.$el.clientHeight - me.$refs["scrollContent"].clientHeight + me.heightOffset;
+	    			me.scrollAuto = Math.max(tmpHeight,0)+"px";
+	    		}else{
+	    			me.scrollAuto = 0;
+	    		}
+	    }
     },
   }
   Vue.component("cv-scroll",component);

@@ -49,9 +49,24 @@ img{border:0}
         text-align: center;
         overflow: hidden;
         background-color: $blue;
+        color: $white;
         >span{
-            display: inline-block;
-            color: $white;
+            position: absolute;
+            display: inline-block; 
+            padding: $nav-header-padding;
+            top: 0;
+            &.left{
+                left: 0;
+            }
+            &.right{
+                right: 0;
+            }
+            >button.nav-btn{
+                background:none;
+                border: none;
+                color: $white;
+                font-size: 16px;
+            }
         }
         & + .cv-nav-content{
             padding-top: $nav-header-height;
@@ -130,7 +145,7 @@ img{border:0}
 .cv-scroll-container{
     position: relative;
     width: 100%;
-    height: 200px;
+    height: 100%;
     background-color: $vi-background-color;
     overflow: hidden;
 }
@@ -418,108 +433,6 @@ img{border:0}
 }
 
 /*
- * 多选checkbox控件
- */
-.cv-checkbox-container{
-    display: inline-block;
-    .cv-checkbox{
-        visibility: hidden;
-        width:0px;
-        height:0px;
-        display:none;
-        &+.cv-checkbox-custom{
-            cursor:pointer;
-            display:inline-block; 
-            position: relative;
-            white-space: nowrap; 
-            color: $dark-grey;
-            font-size: 14px;
-            height: auto;
-            line-height: 24px;
-            min-height: 24px;
-            padding-left: 14px;
-            &:before{
-                content: '';
-                display: block;
-                @include box-sizing-set-border-box;
-                position: absolute;
-                width: 10px;
-                height: 10px;
-                left: 5px;
-                top: 7px;
-                margin: 0;
-                padding: 0;
-                border: 1px solid $dark-grey;     
-                -webkit-transition-property:-webkit-transform;
-                -webkit-transition-duration:300ms;            
-            }
-        }
-        &:checked{
-            &+.cv-checkbox-custom{
-                color: $blue;
-                &:before{
-                    border-color: $blue;
-                    border-top: none;
-                    border-right: none;
-                    width: 16px;
-                    height: 8px;
-                    top: 5px;
-                    -webkit-transform:rotate(-45deg) translateZ(0);
-                }
-            }
-        }
-    }   
-}
-
-/*
- * 单选radio控件
- */
-.cv-radio-container{
-    .cv-radio{
-        visibility: hidden;
-        width:0px;
-        height:0px;
-        display:none;
-        &+.cv-radio-custom{
-            cursor:pointer;
-            display:inline-block; 
-            position: relative;
-            white-space: nowrap; 
-            color: $dark-grey;
-            font-size: 14px;
-            height: auto;
-            line-height: 24px;
-            min-height: 24px;
-            padding-left: 14px;
-            &:before{
-                content: '';
-                display: block;
-                @include box-sizing-set-border-box;
-                position: absolute;
-                width: 14px;
-                height: 14px;
-                left: 3px;
-                top: 5px;
-                margin: 0;
-                padding: 0;
-                border-radius: 7px;
-                border: 1px solid $dark-grey;     
-                -webkit-transition-property:-webkit-transform;
-                -webkit-transition-duration:300ms;            
-            }
-        }
-        &:checked{
-            &+.cv-radio-custom{
-                color: $blue;
-                &:before{                   
-                    border: 5px solid $blue;
-                }
-            }
-        }
-    }   
-}
-
-/*
  * 单选树控件
  */
 .cv-tree-single-container{
@@ -684,4 +597,121 @@ img{border:0}
     }
 }
 
+/***********************************************************
+ * 常用样式部分
+ ***********************************************************/
+/*
+ * 多选checkbox控件
+ */
+.cv-checkbox-container{
+    display: inline-block;
+    .cv-checkbox{
+        visibility: hidden;
+        width:0px;
+        height:0px;
+        display:none;
+        &+.cv-checkbox-custom{
+            cursor:pointer;
+            display:inline-block; 
+            position: relative;
+            white-space: nowrap; 
+            color: $dark-grey;
+            font-size: 14px;
+            height: auto;
+            line-height: 24px;
+            min-height: 24px;
+            padding-left: 14px;
+            &:before{
+                content: '';
+                display: block;
+                @include box-sizing-set-border-box;
+                position: absolute;
+                width: 10px;
+                height: 10px;
+                left: 5px;
+                top: 7px;
+                margin: 0;
+                padding: 0;
+                border: 1px solid $dark-grey;     
+                -webkit-transition-property:-webkit-transform;
+                -webkit-transition-duration:300ms;            
+            }
+        }
+        &:checked{
+            &+.cv-checkbox-custom{
+                color: $blue;
+                &:before{
+                    border-color: $blue;
+                    border-top: none;
+                    border-right: none;
+                    width: 16px;
+                    height: 8px;
+                    top: 5px;
+                    -webkit-transform:rotate(-45deg) translateZ(0);
+                }
+            }
+        }
+    }   
+}
+/*
+ * 单选radio控件
+ */
+.cv-radio-container{
+    .cv-radio{
+        visibility: hidden;
+        width:0px;
+        height:0px;
+        display:none;
+        &+.cv-radio-custom{
+            cursor:pointer;
+            display:inline-block; 
+            position: relative;
+            white-space: nowrap; 
+            color: $dark-grey;
+            font-size: 14px;
+            height: auto;
+            line-height: 24px;
+            min-height: 24px;
+            padding-left: 14px;
+            &:before{
+                content: '';
+                display: block;
+                @include box-sizing-set-border-box;
+                position: absolute;
+                width: 14px;
+                height: 14px;
+                left: 3px;
+                top: 5px;
+                margin: 0;
+                padding: 0;
+                border-radius: 7px;
+                border: 1px solid $dark-grey;     
+                -webkit-transition-property:-webkit-transform;
+                -webkit-transition-duration:300ms;            
+            }
+        }
+        &:checked{
+            &+.cv-radio-custom{
+                color: $blue;
+                &:before{                   
+                    border: 5px solid $blue;
+                }
+            }
+        }
+    }   
+}
+/*
+ * 满屏按钮
+ */
+.cv-full-btn{
+    width: 100%;
+    height: 50px;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    background-color: $blue;
+    color: $white;
+}
+
 @import 'platform';
+@import 'demo';

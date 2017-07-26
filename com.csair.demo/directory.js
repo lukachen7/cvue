@@ -4,21 +4,19 @@ define(["vue","toastr","servicePath/rule",'servicePath/timer',"text!com.csair.de
     template:template,
     data:function(){
       return {
-        
+        clientPages:app.clientPage,
       }
     },
-    props:["param","contentId"],
+    props:["param"],
     mounted:function(){
     		
     },
     destroyed:function(){
     		console.log("destroyed");
-    		
     },
     methods:{
     		"navPush":function (content){
-//  			this.$refs.cvScroll.consoleTest();
-    			this.$emit("navPush",content);
+    			this.$emit("navPush",{contentClass:content,contentId:_.uniqueId("content_"),param:"传参，类型不限"});
     		}
     },
   }

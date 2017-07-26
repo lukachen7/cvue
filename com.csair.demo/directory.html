@@ -1,8 +1,24 @@
 <div>
 	<div class="cv-nav-header">
-		<span>我是标题</span>
+		我是标题
 	</div>
 	<div class="cv-nav-content">
-		我是内容
+		<cv-scroll :is-refresh="false" :is-load-more="false">
+			<div class="directory-list">
+				<ul>
+					<li><button class="cv-full-btn" v-on:click="navPush(clientPages.navDemo)">导航功能演示</button></li>
+					<li><button class="cv-full-btn" v-on:click="navPush(clientPages.scrollDemo)">上下拉刷新演示</button>></button></li>
+					<li><button class="cv-full-btn"></button></li>
+					<li><button class="cv-full-btn"></button></li>
+					<li><button class="cv-full-btn"></button></li>
+					<li><button class="cv-full-btn"></button></li>
+					<li><button class="cv-full-btn"></button></li>
+					<li><button class="cv-full-btn"></button></li>
+					<li><button class="cv-full-btn"></button></li>
+					<li><button class="cv-full-btn"></button></li>
+					<li><button class="cv-full-btn"></button></li>					
+				</ul>
+			</div>
+		</cv-scroll>
 	</div>
 </div>

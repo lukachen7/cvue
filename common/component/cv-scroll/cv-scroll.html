@@ -1,10 +1,8 @@
 <div class="cv-scroll-container">
-	<div>
-		<cv-pull-down v-show="isRefresh"></cv-pull-down>
-	
-		<slot></slot>
-			
-		<cv-pull-up name="loadMore" v-show="isLoadMore"></cv-pull-up>
+	<div ref="scrollContent">
+		<cv-pull-down v-if="isRefresh"></cv-pull-down>
+			<slot></slot>			
+		<cv-pull-up name="loadMore" v-if="isLoadMore"></cv-pull-up>
+		<div v-bind:style="{height:scrollAuto}"></div>
 	</div>
-	
 </div>
