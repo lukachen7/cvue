@@ -1,0 +1,41 @@
+<div>
+	<div class="cv-nav-header">
+		<span class="left"><button class="nav-btn" v-on:click="$emit('navBack')">back</button></span>
+	 	部分现成CSS演示
+	</div>
+	<div class="cv-nav-content">
+		<cv-scroll :is-refresh="false" :is-load-more="false">
+			<div class="form-demo-list">
+				<ul>
+					<li>
+						<div class="controls">
+							<div>单选控件</div>
+							<div>
+								<span class="cv-radio-container" v-for="item in radioData">
+									<input class="cv-radio" v-bind:id="'radio_'+item.value" v-bind:value="item.value" v-bind:class="{checked:radioPicked == item.value}" type="radio" v-model="radioPicked">
+									<label class="cv-radio-custom" v-bind:for="'radio_'+item.value">&nbsp;{{item.labelText}}</label>
+								</span>
+							</div>
+							<div>已选择：{{radioPicked}}</div>
+						</div>
+					</li>
+					<li>
+						<div class="controls">
+							<div>多选控件</div>
+							<div>
+								<span class="cv-checkbox-container" v-for="item in checkboxData">
+									<input class="cv-checkbox" v-bind:id="'checkbox_'+item.value" v-bind:value="item.value" v-bind:class="{checked:item.checked}" type="checkbox" v-model="item.checked">
+									<label class="cv-checkbox-custom" v-bind:for="'checkbox_'+item.value">&nbsp;{{item.labelText}}</label>
+								</span>
+							</div>
+							<div>
+								已选择：<br />
+								<span v-for="item in checkboxData">{{item.value}}:{{item.checked}}<br /></span>
+							</div>
+						</div>
+					</li>
+				</ul>
+			</div>
+		</cv-scroll>
+	</div>
+</div>

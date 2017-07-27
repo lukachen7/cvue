@@ -1,0 +1,14 @@
+<div>
+	<div class="cv-nav-header">
+		<span class="left"><button class="nav-btn" v-on:click="$emit('navBack')">back</button></span>
+	 	toast提示演示
+	</div>
+	<div class="cv-nav-content">
+		<cv-scroll :is-refresh="false" :is-load-more="false">
+			<button v-on:click="showSuccess">成功提示</button><br /><br />
+			<button v-on:click="showError">错误提示</button><br /><br />
+			<button v-on:click="showWarning">警告提示</button><br /><br />
+			<button v-on:click="showInfo">消息提示</button><br /><br />
+		</cv-scroll>
+	</div>
+</div>

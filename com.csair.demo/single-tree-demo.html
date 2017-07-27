@@ -1,0 +1,12 @@
+<div>
+	<div class="cv-nav-header">
+		<span class="left"><button class="nav-btn" v-on:click="$emit('navBack')">back</button></span>
+	 	单选树控件演示
+	</div>
+	<div class="cv-nav-content">
+		<cv-scroll :is-refresh="false" :is-load-more="false">
+			<button v-on:click="showModal('middle-single-tree','move-fade')">{{singleItem?singleItem.itemText:'modal居中显示树选择'}}</button><br /><br />
+			<button v-on:click="showModal('bottom-single-tree','bottom-push')">{{singleItem?singleItem.itemText:'modal底部弹出树选择'}}</button><br /><br />
+		</cv-scroll>
+	</div>
+</div>

@@ -5,7 +5,7 @@
 		<!--横排内容如果分行会有小间隔BUG-->
 		<div v-for="item in tmpList" class="cv-slider-item">1i1222222</div>
 	</cv-slider>
-	<cv-scroll ref="cvScroll2" :is-refresh="false" :is-load-more="false">
+	<cv-scroll ref="cvScroll2" :is-refresh="false" :is-load-more="false" style="height:200px;">
 		<cv-slider auto-play="true">
 			<div v-for="item in tmpList" class="cv-slider-item">1i1222222-{{item}}</div>
 		</cv-slider>

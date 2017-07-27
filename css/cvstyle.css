@@ -941,4 +941,11 @@ button.slider-demo-btn {
   background-color: #0099ff;
   color: #ffffff; }
 
+.form-demo-list > ul > li {
+  padding: 10px; }
+  .form-demo-list > ul > li > div.controls {
+    width: 100%;
+    padding: 5px;
+    background-color: #cccccc; }
+
 /*# sourceMappingURL=cvstyle.css.map */

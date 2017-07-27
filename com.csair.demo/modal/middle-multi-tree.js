@@ -1,4 +1,4 @@
-define(["vue","text!com.csair.demo/modal/bottom-modal.html","com.csair.demo/app"],function(Vue,template,app) {
+define(["vue","text!com.csair.demo/modal/middle-multi-tree.html","com.csair.demo/app"],function(Vue,template,app) {
   // 这里是模块的代码
   var modal = {
     template:template,
@@ -25,16 +25,11 @@ define(["vue","text!com.csair.demo/modal/bottom-modal.html","com.csair.demo/app"
 	    }
 	},
     methods:{
-    		openModal:function(modal,type,isOnly){
-    			if (typeof modal == "string" && typeof type == "string"){
-    				app.rootModal.showModal({modalClass:"cv-modal-default",modalContent:modal,param:null,modalEffect:type},isOnly);
-    			}    			
-    		},
-    		hideModal:function(){
+    		selectedComplete:function(){
     			this.$emit("hideModal");
     		}
     },
   }
-  Vue.component("bottom-modal",modal);
+  Vue.component("middle-multi-tree",modal);
   return modal;
 });

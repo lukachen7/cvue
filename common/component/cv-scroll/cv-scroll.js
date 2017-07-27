@@ -109,9 +109,10 @@ function(Vue,iScroll,template,cvPullDown,cvPullUp) {
 		
 		me.scrollAutoFunc();
     },
-    updated:function(){
+    updated:function(){  		
     		var me = this;
     		me.iscroll.refresh();
+//  		console.log(me.$el.clientHeight+"----"+me.$refs["scrollContent"].clientHeight);
     		if(me.$el.clientHeight != me.$refs["scrollContent"].clientHeight-me.heightOffset){
     			me.scrollAutoFunc();
     		}
@@ -144,7 +145,7 @@ function(Vue,iScroll,template,cvPullDown,cvPullUp) {
 		"scrollAutoFunc":function(){
 	    		var me = this;
 	    		if(me.$refs.scrollContent){
-	    			var tmpHeight = me.$el.clientHeight - me.$refs["scrollContent"].clientHeight + me.heightOffset;
+	    			var tmpHeight = me.$el.clientHeight - me.$refs["scrollContent"].clientHeight - parseInt(me.scrollAuto) + me.heightOffset;
 	    			me.scrollAuto = Math.max(tmpHeight,0)+"px";
 	    		}else{
 	    			me.scrollAuto = 0;

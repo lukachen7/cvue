@@ -1,4 +1,4 @@
-define(["vue","toastr","servicePath/rule",'servicePath/timer',"text!com.csair.demo/modal-demo.html","com.csair.demo/app"],function(Vue,toastr,rule,timer,template,app) {
+define(["vue","text!com.csair.demo/modal-demo.html","com.csair.demo/app"],function(Vue,template,app) {
   // 这里是模块的代码
   var page = {
     template:template,
@@ -15,8 +15,10 @@ define(["vue","toastr","servicePath/rule",'servicePath/timer',"text!com.csair.de
     		console.log("destroyed");
     },
     methods:{
-    		showModal:function(modalName){
-    			app.rootModal.showModal({modalClass:"cv-modal-default",modalContent:"middle-modal",param:null,modalEffect:"move-fade"});
+    		showModal:function(modalName,type){
+    			if (typeof modalName == "string" && typeof type == "string"){
+    				app.rootModal.showModal({modalClass:"cv-modal-default",modalContent:modalName,param:null,modalEffect:type});
+    			}
     		}
     },
   }

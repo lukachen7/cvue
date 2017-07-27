@@ -30,3 +30,16 @@ button.slider-demo-btn{
     color: $white;
 }
 
+.form-demo-list{
+    >ul{
+        >li{
+            padding: 10px;
+            >div.controls{
+                width: 100%;
+                padding: 5px;
+                background-color: $light-grey;
+                text-align: center;
+            }
+        }
+    }
+}

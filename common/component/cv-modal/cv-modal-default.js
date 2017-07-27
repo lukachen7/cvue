@@ -21,7 +21,7 @@ define(["vue","jquery","text!componentPath/cv-modal/cv-modal-default.html","unde
     		backgroundAfterEnter:function(){
     			this.isShow = true;
     		},
-    		hideModal:function(){
+    		hideModal:function(){    			
     			this.isShow = false;
     		},  
     		afterLeave:function(){
