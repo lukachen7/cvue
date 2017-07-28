@@ -1,10 +1,13 @@
 .iOS{
     .cv-nav-container{
-        >.cv-nav-header{
+        >.cv-nav-header{           
             padding-top: $ios-status-height + $nav-header-padding;
             height: $nav-header-height + $ios-status-height;
             & + .cv-nav-content{
                 padding-top: $nav-header-height + $ios-status-height;
+            }
+            >span{
+                top: $ios-status-height;
             }
         }
     }

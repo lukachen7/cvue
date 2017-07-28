@@ -17,7 +17,6 @@ define( ['underscore','toastr'],function(_,toastr) {
 	return {
 		//页面控件列表
 		clientPage:{
-			navDemo:"nav-demo",
 			scrollDemo:"scroll-demo",
 			sliderDemo:"slider-demo",
 			formDemo:"form-demo",
@@ -26,7 +25,8 @@ define( ['underscore','toastr'],function(_,toastr) {
 			singleTreeDemo:"single-tree-demo",
 			multiTreeDemo:"multi-tree-demo",
 			loadingDemo:"loading-demo",
-			toastrDemo:"toastr-demo"
+			toastrDemo:"toastr-demo",
+			navDemo:"nav-demo"
 		},
 		root:null,
 		rootModal:null,

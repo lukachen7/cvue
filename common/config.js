@@ -7,7 +7,7 @@ require.config({
         // jquery
         jquery        : 'lib/jquery/jquery-2.1.4.min',
 		// vue
-		vue           : 'lib/vue/vue',
+		vue           : 'lib/vue/vue.min',
 		//其他辅助工具类
         underscore    : 'lib/lodash.min',
         iscroll       : 'lib/iscroll/iscroll-probe',

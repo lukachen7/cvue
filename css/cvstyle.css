@@ -918,6 +918,8 @@ img {
   height: 64px; }
   .iOS .cv-nav-container > .cv-nav-header + .cv-nav-content {
     padding-top: 64px; }
+  .iOS .cv-nav-container > .cv-nav-header > span {
+    top: 20px; }
 
 .directory-list > ul > li {
   padding: 5px 10px 5px 10px;
@@ -946,6 +948,7 @@ button.slider-demo-btn {
   .form-demo-list > ul > li > div.controls {
     width: 100%;
     padding: 5px;
-    background-color: #cccccc; }
+    background-color: #cccccc;
+    text-align: center; }
 
 /*# sourceMappingURL=cvstyle.css.map */

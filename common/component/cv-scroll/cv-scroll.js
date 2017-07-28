@@ -133,8 +133,10 @@ function(Vue,iScroll,template,cvPullDown,cvPullUp) {
 	},
     methods:{
     		"scrollRefresh":function(){
-    			var me = this; 			
-    			me.iscroll.refresh();
+    			var me = this; 		
+    			if(me.iscroll){
+    				me.iscroll.refresh();
+    			}   			
     		},
     		"pullDownAction":function(){
     			this.$emit("pullDownAction",this)	;
