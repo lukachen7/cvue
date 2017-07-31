@@ -805,6 +805,58 @@ img {
       .cv-tree-multi-container > .cv-tree-multi-control button.cv-tree-multi-control-button:last-child {
         border-left: 1px solid #ffffff; }
 
+/*
+ * cv-cell控件样式
+ */
+.cv-cell-container {
+  position: relative;
+  width: 100%;
+  overflow-x: hidden; }
+  .cv-cell-container > .cv-cell-item-container {
+    position: relative;
+    display: inline-table;
+    z-index: 1;
+    white-space: nowrap;
+    width: auto;
+    -webkit-tap-highlight-color: transparent;
+    -webkit-touch-callout: none;
+    -webkit-transform: translateZ(0);
+    -moz-transform: translateZ(0);
+    -ms-transform: translateZ(0);
+    -o-transform: translateZ(0);
+    transform: translateZ(0);
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    -o-user-select: none;
+    user-select: none; }
+    .cv-cell-container > .cv-cell-item-container > .cv-cell-item {
+      display: inline-table;
+      vertical-align: text-top; }
+      .cv-cell-container > .cv-cell-item-container > .cv-cell-item > img {
+        display: block;
+        width: 100%; }
+      .cv-cell-container > .cv-cell-item-container > .cv-cell-item > button {
+        border: none;
+        height: 100%;
+        background-color: #0099ff;
+        padding: 0 5px 0 5px;
+        color: #ffffff; }
+        .cv-cell-container > .cv-cell-item-container > .cv-cell-item > button.delete {
+          background-color: #ff0000; }
+        .cv-cell-container > .cv-cell-item-container > .cv-cell-item > button.edit {
+          background-color: #0099ff; }
+
+.cv-slider-container {
+  position: relative;
+  width: 100%;
+  overflow: hidden; }
+  .cv-slider-container > div:last-child {
+    height: auto;
+    overflow: auto;
+    opacity: 0;
+    pointer-events: none; }
+
 /***********************************************************
  * 常用样式部分
  ***********************************************************/
@@ -950,5 +1002,11 @@ button.slider-demo-btn {
     padding: 5px;
     background-color: #cccccc;
     text-align: center; }
+
+.list-demo-list > ul > li {
+  border-bottom: 1px dashed #333333;
+  line-height: 30px;
+  color: #333333;
+  font-size: 16px; }
 
 /*# sourceMappingURL=cvstyle.css.map */

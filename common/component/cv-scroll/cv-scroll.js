@@ -152,6 +152,10 @@ function(Vue,iScroll,template,cvPullDown,cvPullUp) {
 	    		}else{
 	    			me.scrollAuto = 0;
 	    		}
+	    		if (me.iscroll){
+	    			me.iscroll.refresh();
+	    		}
+	    		
 	    }
     },
   }

@@ -26,7 +26,8 @@ define( ['underscore','toastr'],function(_,toastr) {
 			multiTreeDemo:"multi-tree-demo",
 			loadingDemo:"loading-demo",
 			toastrDemo:"toastr-demo",
-			navDemo:"nav-demo"
+			navDemo:"nav-demo",
+			listDemo:"list-demo"
 		},
 		root:null,
 		rootModal:null,

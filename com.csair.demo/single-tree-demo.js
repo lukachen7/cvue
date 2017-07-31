@@ -1,4 +1,4 @@
-define(["vue","moment","text!com.csair.demo/single-tree-demo.html","com.csair.demo/app"],function(Vue,moment,template,app) {
+define(["vue","text!com.csair.demo/single-tree-demo.html","com.csair.demo/app"],function(Vue,template,app) {
   // 这里是模块的代码
   var page = {
     template:template,

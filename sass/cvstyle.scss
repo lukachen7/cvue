@@ -603,6 +603,62 @@ img{border:0}
     }
 }
 
+/*
+ * cv-cell控件样式
+ */
+.cv-cell-container{
+    position: relative;
+    width: 100%;
+    overflow-x: hidden;
+    >.cv-cell-item-container{
+        position: relative;
+        display: inline-table;
+        z-index: 1;  
+        white-space: nowrap;
+        width: auto;
+        -webkit-tap-highlight-color: rgba(0,0,0,0);
+        -webkit-touch-callout: none;
+        @include transform-set(translateZ(0));    
+        @include user-select-set(none);
+        >.cv-cell-item{
+            display: inline-table;   
+            vertical-align:text-top;         
+            >img{
+                display:block;
+                width: 100%;
+            }
+            &.controls{
+            }
+            >button{
+                border: none;
+                height: 100%;
+                background-color: $blue;
+                padding: 0 5px 0 5px;
+                color: $white;
+                &.delete{
+                    background-color: $red;
+                }
+                &.edit{
+                    background-color: $blue;
+                }
+            }
+        }
+    }
+}
+.cv-slider-container{
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+    >div:last-child{
+        height: auto;
+        overflow: auto;
+        opacity: 0;
+        pointer-events: none;
+    }
+}
+
+
+
 /***********************************************************
  * 常用样式部分
  ***********************************************************/

@@ -1,5 +1,5 @@
-define(["vue","jquery","iscroll",'servicePath/timer',"text!componentPath/cv-slider/cv-slider.html"],
-function(Vue,$,iScroll,timer,template) {
+define(["vue","jquery","iscroll","text!componentPath/cv-slider/cv-slider.html"],
+function(Vue,$,iScroll,template) {
   /*
    * 滑动焦点图控件 可放任何元素
    */
@@ -28,17 +28,35 @@ function(Vue,$,iScroll,timer,template) {
 					snapSpeed: 500,
 					keyBindings: true,
 				});	
-				//注册自动轮播
-				me.sliderTimeOutKey = timer.addFrameOutCall(40,function(){
+				
+				me.iscroll.on("scroll",function(){
+					if(me.sliderTimeOutKey){
+						clearTimeout(me.sliderTimeOutKey);
+						me.sliderTimeOutKey = null;
+					}
+				})
+				me.iscroll.on("scrollEnd",function(){
+					if(me.sliderTimeOutKey){
+						clearTimeout(me.sliderTimeOutKey);
+						me.sliderTimeOutKey = null;
+					}
 					if(me.autoPlay){
-						if (me.iscroll.x == me.iscroll.maxScrollX){
-							me.iscroll.goToPage(0,0,500,iScroll.utils.ease.circular)
-						}else{
-							me.iscroll.next();
-						}
-					}				
-				});
+						registerAutoPlay();
+					}
+				})
+				if(me.autoPlay){
+					registerAutoPlay();
+				}
     			}
+    		}
+    		function registerAutoPlay(){
+    			me.sliderTimeOutKey = setTimeout(function(){
+    				if (me.iscroll.x == me.iscroll.maxScrollX){
+					me.iscroll.goToPage(0,0,500,iScroll.utils.ease.circular)
+				}else{
+					me.iscroll.next();
+				}
+    			},4000);
     		}
     		$(window).resize(me.resizeEl);
     		init();
@@ -52,7 +70,7 @@ function(Vue,$,iScroll,timer,template) {
     			this.iscroll=null;
     		}
     		if(this.sliderTimeOutKey != null){
-    			timer.removeFrameOutCall(this.sliderTimeOutKey);
+			clearTimeout(this.sliderTimeOutKey);
     			this.sliderTimeOutKey = null;
     		}
     },

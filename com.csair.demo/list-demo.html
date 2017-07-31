@@ -1,0 +1,19 @@
+<div>
+	<div class="cv-nav-header">
+		<span class="left"><button class="nav-btn" v-on:click="$emit('navBack')"><i class="icon-chevron-left"></button></span>
+	 	cv-cell控件演示
+	</div>
+	<div class="cv-nav-content">
+		<cv-scroll ref="cvScroll" :is-refresh="true" :is-load-more="true" v-on:pullDownAction="pullDownAction" v-on:pullUpAction="pullUpAction">
+			<div class="list-demo-list">
+				<ul>
+					<li v-for="item in dataList">
+						<cv-cell v-on:onResize="onResize">
+							<div class="cv-cell-item">{{item}}<br />{{item}}</div><div class="cv-cell-item controls" slot="control"><button class="delete">删除</button><button class="edit">编辑</button></div>
+						</cv-cell>
+					</li>				
+				</ul>
+			</div>
+		</cv-scroll>
+	</div>
+</div>

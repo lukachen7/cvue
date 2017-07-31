@@ -12,6 +12,7 @@ require(['vue','fastclick','servicePath/rule','servicePath/timer','com.csair.dem
 'componentPath/cv-form/cv-radio',
 'componentPath/cv-tree/cv-tree-single',
 'componentPath/cv-tree/cv-tree-multi',
+'componentPath/cv-list/cv-cell',
 'com.csair.demo/directory',
 'com.csair.demo/nav-demo',
 'com.csair.demo/scroll-demo',
@@ -30,12 +31,20 @@ require(['vue','fastclick','servicePath/rule','servicePath/timer','com.csair.dem
 'com.csair.demo/modal/bottom-multi-tree',
 'com.csair.demo/loading-demo',
 'com.csair.demo/toastr-demo',
-'com.csair.demo/form-demo'],
+'com.csair.demo/form-demo',
+'com.csair.demo/list-demo'],
 function(Vue,FastClick,rule,timer,app){
+	var hash = window.location.hash;
+	if (hash && hash.length>1){
+		hash = hash.replace("#","");
+	}else{
+		hash = "directory";
+	}
 	var root = new Vue({
 	  el: '#demo',
 	  data: {
-	    platformClass:null
+	    platformClass:null,
+	    defaultContent:hash
 	  }
 	});
 	FastClick.attach(document.body);
