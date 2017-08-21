@@ -1,15 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="47386915-3713-4408-a08c-75728f41dc42" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/com.csair.demo/app.js" afterPath="$PROJECT_DIR$/com.csair.demo/app.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/com.csair.demo/directory.html" afterPath="$PROJECT_DIR$/com.csair.demo/directory.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/com.csair.demo/index.js" afterPath="$PROJECT_DIR$/com.csair.demo/index.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/css/cvstyle.css" afterPath="$PROJECT_DIR$/css/cvstyle.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/css/cvstyle.css.map" afterPath="$PROJECT_DIR$/css/cvstyle.css.map" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/sass/animation.scss" afterPath="$PROJECT_DIR$/sass/animation.scss" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/sass/cvstyle.scss" afterPath="$PROJECT_DIR$/sass/cvstyle.scss" />
-    </list>
+    <list default="true" id="47386915-3713-4408-a08c-75728f41dc42" name="Default" comment="" />
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
     <ignored path="$PROJECT_DIR$/tmp/" />
