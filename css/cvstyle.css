@@ -251,6 +251,141 @@
     -o-transform: translateY(100%);
     transform: translateY(100%); } }
 /*
+ * cv-tab滑动动画
+ */
+.slider-left-enter-active {
+  -webkit-animation: slider-left-in 0.3s;
+  -moz-animation: slider-left-in 0.3s;
+  -ms-animation: slider-left-in 0.3s;
+  -o-animation: slider-left-in 0.3s;
+  animation: slider-left-in 0.3s; }
+
+.slider-left-leave-active {
+  -webkit-animation: slider-left-out 0.3s;
+  -moz-animation: slider-left-out 0.3s;
+  -ms-animation: slider-left-out 0.3s;
+  -o-animation: slider-left-out 0.3s;
+  animation: slider-left-out 0.3s; }
+
+@-webkit-keyframes slider-left-in {
+  0% {
+    -webkit-transform: translateX(100%);
+    -moz-transform: translateX(100%);
+    -ms-transform: translateX(100%);
+    -o-transform: translateX(100%);
+    transform: translateX(100%); }
+  100% {
+    -webkit-transform: translateX(0);
+    -moz-transform: translateX(0);
+    -ms-transform: translateX(0);
+    -o-transform: translateX(0);
+    transform: translateX(0); } }
+@keyframes slider-left-in {
+  0% {
+    -webkit-transform: translateX(100%);
+    -moz-transform: translateX(100%);
+    -ms-transform: translateX(100%);
+    -o-transform: translateX(100%);
+    transform: translateX(100%); }
+  100% {
+    -webkit-transform: translateX(0);
+    -moz-transform: translateX(0);
+    -ms-transform: translateX(0);
+    -o-transform: translateX(0);
+    transform: translateX(0); } }
+@-webkit-keyframes slider-left-out {
+  0% {
+    -webkit-transform: translateX(0);
+    -moz-transform: translateX(0);
+    -ms-transform: translateX(0);
+    -o-transform: translateX(0);
+    transform: translateX(0); }
+  100% {
+    -webkit-transform: translateX(-100%);
+    -moz-transform: translateX(-100%);
+    -ms-transform: translateX(-100%);
+    -o-transform: translateX(-100%);
+    transform: translateX(-100%); } }
+@keyframes slider-left-out {
+  0% {
+    -webkit-transform: translateX(0);
+    -moz-transform: translateX(0);
+    -ms-transform: translateX(0);
+    -o-transform: translateX(0);
+    transform: translateX(0); }
+  100% {
+    -webkit-transform: translateX(-100%);
+    -moz-transform: translateX(-100%);
+    -ms-transform: translateX(-100%);
+    -o-transform: translateX(-100%);
+    transform: translateX(-100%); } }
+.slider-right-enter-active {
+  -webkit-animation: slider-right-in 0.3s;
+  -moz-animation: slider-right-in 0.3s;
+  -ms-animation: slider-right-in 0.3s;
+  -o-animation: slider-right-in 0.3s;
+  animation: slider-right-in 0.3s; }
+
+.slider-right-leave-active {
+  -webkit-animation: slider-right-out 0.3s;
+  -moz-animation: slider-right-out 0.3s;
+  -ms-animation: slider-right-out 0.3s;
+  -o-animation: slider-right-out 0.3s;
+  animation: slider-right-out 0.3s; }
+
+@-webkit-keyframes slider-right-in {
+  0% {
+    -webkit-transform: translateX(-100%);
+    -moz-transform: translateX(-100%);
+    -ms-transform: translateX(-100%);
+    -o-transform: translateX(-100%);
+    transform: translateX(-100%); }
+  100% {
+    -webkit-transform: translateX(0);
+    -moz-transform: translateX(0);
+    -ms-transform: translateX(0);
+    -o-transform: translateX(0);
+    transform: translateX(0); } }
+@-webkit-keyframes slider-right-out {
+  0% {
+    -webkit-transform: translateX(0);
+    -moz-transform: translateX(0);
+    -ms-transform: translateX(0);
+    -o-transform: translateX(0);
+    transform: translateX(0); }
+  100% {
+    -webkit-transform: translateX(100%);
+    -moz-transform: translateX(100%);
+    -ms-transform: translateX(100%);
+    -o-transform: translateX(100%);
+    transform: translateX(100%); } }
+@keyframes slider-right-in {
+  0% {
+    -webkit-transform: translateX(-100%);
+    -moz-transform: translateX(-100%);
+    -ms-transform: translateX(-100%);
+    -o-transform: translateX(-100%);
+    transform: translateX(-100%); }
+  100% {
+    -webkit-transform: translateX(0);
+    -moz-transform: translateX(0);
+    -ms-transform: translateX(0);
+    -o-transform: translateX(0);
+    transform: translateX(0); } }
+@keyframes slider-right-out {
+  0% {
+    -webkit-transform: translateX(0);
+    -moz-transform: translateX(0);
+    -ms-transform: translateX(0);
+    -o-transform: translateX(0);
+    transform: translateX(0); }
+  100% {
+    -webkit-transform: translateX(100%);
+    -moz-transform: translateX(100%);
+    -ms-transform: translateX(100%);
+    -o-transform: translateX(100%);
+    transform: translateX(100%); } }
+/*
  * 全局和默认CSS
  */
 html {
@@ -420,28 +555,26 @@ img {
     overflow: auto;
     opacity: 0;
     pointer-events: none; }
-
-.cv-slider-item-container {
-  position: absolute;
-  z-index: 1;
-  white-space: nowrap;
-  -webkit-tap-highlight-color: transparent;
-  -webkit-touch-callout: none;
-  -webkit-transform: translateZ(0);
-  -moz-transform: translateZ(0);
-  -ms-transform: translateZ(0);
-  -o-transform: translateZ(0);
-  transform: translateZ(0);
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  -o-user-select: none;
-  user-select: none; }
-
-.cv-slider-item {
-  display: inline-block; }
-  .cv-slider-item > img {
-    width: 100%; }
+  .cv-slider-container .cv-slider-item-container {
+    position: absolute;
+    z-index: 1;
+    white-space: nowrap;
+    -webkit-tap-highlight-color: transparent;
+    -webkit-touch-callout: none;
+    -webkit-transform: translateZ(0);
+    -moz-transform: translateZ(0);
+    -ms-transform: translateZ(0);
+    -o-transform: translateZ(0);
+    transform: translateZ(0);
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    -o-user-select: none;
+    user-select: none; }
+    .cv-slider-container .cv-slider-item-container .cv-slider-item {
+      display: inline-block; }
+      .cv-slider-container .cv-slider-item-container .cv-slider-item > img {
+        width: 100%; }
 
 /*
  * cv-loading样式
@@ -847,15 +980,14 @@ img {
         .cv-cell-container > .cv-cell-item-container > .cv-cell-item > button.edit {
           background-color: #0099ff; }
 
-.cv-slider-container {
-  position: relative;
+/*
+cv-tab-content控件默认样式
+ */
+.cv-tab-content {
+  position: absolute;
   width: 100%;
-  overflow: hidden; }
-  .cv-slider-container > div:last-child {
-    height: auto;
-    overflow: auto;
-    opacity: 0;
-    pointer-events: none; }
+  height: 100%;
+  background-color: #ffffff; }
 
 /***********************************************************
  * 常用样式部分

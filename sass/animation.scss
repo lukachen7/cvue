@@ -213,3 +213,84 @@ transition: transform $animation-speed;
   }
 }
 
+/*
+ * cv-tab滑动动画
+ */
+//向左滑动
+.slider-left-enter-active {
+    @include animation-set(slider-left-in $animation-speed);
+}
+.slider-left-leave-active {
+    @include animation-set(slider-left-out $animation-speed);
+}
+@-webkit-keyframes slider-left-in {
+  0% {
+      @include transform-set(translateX(100%));    
+  }
+  100% {
+      @include transform-set(translateX(0));  
+  }
+}
+@keyframes slider-left-in {
+  0% {
+      @include transform-set(translateX(100%));    
+  }
+  100% {
+      @include transform-set(translateX(0));  
+  }
+}
+@-webkit-keyframes slider-left-out {
+  0% {
+      @include transform-set(translateX(0));  
+  }
+  100% {
+      @include transform-set(translateX(-100%));  
+  }
+}
+@keyframes slider-left-out {
+  0% {
+      @include transform-set(translateX(0));  
+  }
+  100% {
+      @include transform-set(translateX(-100%));  
+  }
+}
+//向右滑动
+.slider-right-enter-active {
+    @include animation-set(slider-right-in $animation-speed);
+}
+.slider-right-leave-active {
+    @include animation-set(slider-right-out $animation-speed);
+}
+@-webkit-keyframes slider-right-in {
+  0% {
+      @include transform-set(translateX(-100%));  
+  }
+  100% {
+      @include transform-set(translateX(0));  
+  }
+}
+@-webkit-keyframes slider-right-out {
+  0% {
+      @include transform-set(translateX(0));  
+  }
+  100% {
+      @include transform-set(translateX(100%));  
+  }
+}
+@keyframes slider-right-in {
+  0% {
+      @include transform-set(translateX(-100%));  
+  }
+  100% {
+      @include transform-set(translateX(0));  
+  }
+}
+@keyframes slider-right-out {
+  0% {
+      @include transform-set(translateX(0));  
+  }
+  100% {
+      @include transform-set(translateX(100%));  
+  }
+}

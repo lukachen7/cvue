@@ -13,6 +13,8 @@ require(['vue','fastclick','servicePath/rule','servicePath/timer','com.csair.dem
 'componentPath/cv-tree/cv-tree-single',
 'componentPath/cv-tree/cv-tree-multi',
 'componentPath/cv-list/cv-cell',
+'componentPath/cv-tab/cv-tab-content',
+
 'com.csair.demo/directory',
 'com.csair.demo/nav-demo',
 'com.csair.demo/scroll-demo',
@@ -32,7 +34,11 @@ require(['vue','fastclick','servicePath/rule','servicePath/timer','com.csair.dem
 'com.csair.demo/loading-demo',
 'com.csair.demo/toastr-demo',
 'com.csair.demo/form-demo',
-'com.csair.demo/list-demo'],
+'com.csair.demo/list-demo',
+'com.csair.demo/tab-demo/tab-demo',
+'com.csair.demo/tab-demo/tab-content-1',
+'com.csair.demo/tab-demo/tab-content-2',
+'com.csair.demo/tab-demo/tab-content-3'],
 function(Vue,FastClick,rule,timer,app){
 	var hash = window.location.hash;
 	if (hash && hash.length>1){
