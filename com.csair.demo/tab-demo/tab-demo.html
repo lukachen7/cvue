@@ -1,9 +1,9 @@
 <div>
     <div class="cv-nav-header">
         <span class="left"><button class="nav-btn" v-on:click="$emit('navBack')"><i class="icon-chevron-left"></i></button></span>
-        <button v-on:click="changeTab(0)">tab0</button>
-        <button v-on:click="changeTab(1)">tab1</button>
-        <button v-on:click="changeTab(2)">tab2</button>
+        <div class="cv-btn-group light-style">
+            <button v-on:click="changeTab(0)" v-bind:class="{active:currentIndex == 0}">tab0</button><button v-on:click="changeTab(1)" v-bind:class="{active:currentIndex == 1}">tab1</button><button v-on:click="changeTab(2)" v-bind:class="{active:currentIndex == 2}">tab2</button>
+        </div>
     </div>
     <div class="cv-nav-content">
         <cv-tab-content ref="tabContent" :content-list="tabList">

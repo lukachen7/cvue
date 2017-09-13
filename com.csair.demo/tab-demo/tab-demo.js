@@ -12,7 +12,8 @@ define(["vue","text!com.csair.demo/tab-demo/tab-demo.html","com.csair.demo/app",
                     {contentClass:"tab-content-1",contentId:_.uniqueId("content_"),param:"我是数据1"},
                     {contentClass:"tab-content-2",contentId:_.uniqueId("content_"),param:"我是数据2"},
                     {contentClass:"tab-content-3",contentId:_.uniqueId("content_"),param:"我是数据3"}
-                ]
+                ],
+                currentIndex:0
             }
         },
         props:["param"],
@@ -27,7 +28,8 @@ define(["vue","text!com.csair.demo/tab-demo/tab-demo.html","com.csair.demo/app",
         methods:{
             changeTab:function (index) {
                 var self = this;
-                self.$refs.tabContent.showIndex(index);
+                self.currentIndex = index;
+                self.$refs.tabContent.showIndex(self.currentIndex);
             }
         }
     }

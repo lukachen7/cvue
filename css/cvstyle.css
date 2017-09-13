@@ -468,8 +468,9 @@ img {
   .cv-nav-container > .cv-nav-content {
     position: absolute;
     width: 100%;
-    top: 0px;
-    bottom: 0px; }
+    background-color: #ffffff;
+    top: 0;
+    bottom: 0; }
 
 /*
  * cv-modal容器默认样式
@@ -1096,6 +1097,37 @@ cv-tab-content控件默认样式
   border-radius: 5px;
   background-color: #0099ff;
   color: #ffffff; }
+
+/*
+按钮组
+ */
+.cv-btn-group {
+  display: inline-block; }
+  .cv-btn-group > button {
+    padding: 3px 6px 3px 6px;
+    background-color: transparent;
+    border-width: 1px;
+    border-style: solid;
+    border-right-width: 0; }
+    .cv-btn-group > button:first-child {
+      border-top-left-radius: 5px;
+      border-bottom-left-radius: 5px; }
+    .cv-btn-group > button:last-child {
+      border-top-right-radius: 5px;
+      border-bottom-right-radius: 5px;
+      border-right-width: 1px; }
+  .cv-btn-group.light-style > button {
+    color: #ffffff;
+    border-color: #ffffff; }
+    .cv-btn-group.light-style > button.active {
+      background-color: #ffffff;
+      color: #0099ff; }
+  .cv-btn-group.dark-style > button {
+    color: #0099ff;
+    border-color: #0099ff; }
+    .cv-btn-group.dark-style > button.active {
+      background-color: #0099ff;
+      color: #ffffff; }
 
 .iOS .cv-nav-container > .cv-nav-header {
   padding-top: 27px;
