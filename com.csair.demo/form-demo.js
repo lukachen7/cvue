@@ -9,7 +9,8 @@ define(["vue","text!com.csair.demo/form-demo.html","com.csair.demo/app"],functio
         {checked:false,value:"value2",labelText:"labeltext2"},
         {checked:false,value:"value3",labelText:"labeltext3"}],
         radioData:[{value:"aaa",labelText:"AAA"},{value:"bbb",labelText:"BBB"},{value:"ccc",labelText:"CCC"}],
-        radioPicked:"aaa"
+        radioPicked:"aaa",
+          currentIndex:0
       }
     },
     props:["param"],

@@ -2,14 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="47386915-3713-4408-a08c-75728f41dc42" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/com.csair.demo/directory.html" afterPath="$PROJECT_DIR$/com.csair.demo/directory.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/com.csair.demo/nav-demo.html" afterPath="$PROJECT_DIR$/com.csair.demo/nav-demo.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/com.csair.demo/tab-demo/tab-demo.html" afterPath="$PROJECT_DIR$/com.csair.demo/tab-demo/tab-demo.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/com.csair.demo/tab-demo/tab-demo.js" afterPath="$PROJECT_DIR$/com.csair.demo/tab-demo/tab-demo.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/css/cvstyle.css" afterPath="$PROJECT_DIR$/css/cvstyle.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/css/cvstyle.css.map" afterPath="$PROJECT_DIR$/css/cvstyle.css.map" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/sass/cvstyle.scss" afterPath="$PROJECT_DIR$/sass/cvstyle.scss" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/com.csair.demo/form-demo.html" afterPath="$PROJECT_DIR$/com.csair.demo/form-demo.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/com.csair.demo/form-demo.js" afterPath="$PROJECT_DIR$/com.csair.demo/form-demo.js" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -30,11 +24,31 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="cvstyle.scss" pinned="false" current-in-tab="true">
+      <file leaf-file-name="cvstyle.scss" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/sass/cvstyle.scss">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="430">
-              <caret line="805" column="9" lean-forward="true" selection-start-line="805" selection-start-column="9" selection-end-line="805" selection-end-column="9" />
+            <state relative-caret-position="70">
+              <caret line="780" column="26" lean-forward="true" selection-start-line="780" selection-start-column="26" selection-end-line="780" selection-end-column="26" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="form-demo.html" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/com.csair.demo/form-demo.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="598">
+              <caret line="44" column="32" lean-forward="false" selection-start-line="44" selection-start-column="32" selection-end-line="44" selection-end-column="32" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="form-demo.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/com.csair.demo/form-demo.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="180">
+              <caret line="12" column="24" lean-forward="false" selection-start-line="12" selection-start-column="24" selection-end-line="12" selection-end-column="24" />
               <folding />
             </state>
           </provider>
@@ -84,7 +98,7 @@
         <entry file="file://$PROJECT_DIR$/com.csair.demo/tab-demo/tab-demo.html">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="60">
-              <caret line="4" column="263" lean-forward="false" selection-start-line="4" selection-start-column="263" selection-end-line="4" selection-end-column="263" />
+              <caret line="4" column="279" lean-forward="false" selection-start-line="4" selection-start-column="12" selection-end-line="4" selection-end-column="279" />
               <folding />
             </state>
           </provider>
@@ -148,6 +162,8 @@
         <option value="$PROJECT_DIR$/com.csair.demo/tab-demo/tab-demo.js" />
         <option value="$PROJECT_DIR$/com.csair.demo/tab-demo/tab-demo.html" />
         <option value="$PROJECT_DIR$/sass/cvstyle.scss" />
+        <option value="$PROJECT_DIR$/com.csair.demo/form-demo.js" />
+        <option value="$PROJECT_DIR$/com.csair.demo/form-demo.html" />
       </list>
     </option>
   </component>
@@ -451,12 +467,12 @@
       <workItem from="1504744634934" duration="547000" />
       <workItem from="1504854087098" duration="3924000" />
       <workItem from="1505198909546" duration="5657000" />
-      <workItem from="1505263318831" duration="3382000" />
+      <workItem from="1505263318831" duration="4173000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="33983000" />
+    <option name="totallyTimeSpent" value="34774000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="1" y="23" width="1400" height="866" extended-state="0" />
@@ -491,22 +507,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/com.csair.demo/index.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="555">
-          <caret line="37" column="35" lean-forward="false" selection-start-line="37" selection-start-column="35" selection-end-line="37" selection-end-column="35" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/com.csair.demo/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/sass/cvstyle.scss">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="5850">
@@ -862,18 +862,34 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/com.csair.demo/tab-demo/tab-demo.html">
+    <entry file="file://$PROJECT_DIR$/sass/cvstyle.scss">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="4" column="263" lean-forward="false" selection-start-line="4" selection-start-column="263" selection-end-line="4" selection-end-column="263" />
+        <state relative-caret-position="70">
+          <caret line="780" column="26" lean-forward="true" selection-start-line="780" selection-start-column="26" selection-end-line="780" selection-end-column="26" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/sass/cvstyle.scss">
+    <entry file="file://$PROJECT_DIR$/com.csair.demo/tab-demo/tab-demo.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="430">
-          <caret line="805" column="9" lean-forward="true" selection-start-line="805" selection-start-column="9" selection-end-line="805" selection-end-column="9" />
+        <state relative-caret-position="60">
+          <caret line="4" column="279" lean-forward="false" selection-start-line="4" selection-start-column="12" selection-end-line="4" selection-end-column="279" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/com.csair.demo/form-demo.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="12" column="24" lean-forward="false" selection-start-line="12" selection-start-column="24" selection-end-line="12" selection-end-column="24" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/com.csair.demo/form-demo.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="598">
+          <caret line="44" column="32" lean-forward="false" selection-start-line="44" selection-start-column="32" selection-end-line="44" selection-end-column="32" />
           <folding />
         </state>
       </provider>

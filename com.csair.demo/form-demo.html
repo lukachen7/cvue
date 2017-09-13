@@ -34,6 +34,22 @@
 							</div>
 						</div>
 					</li>
+					<li>
+						<div class="controls">
+							<div>按钮组</div>
+							<div>
+								<div class="cv-btn-group light-style">
+									<button v-on:click="currentIndex = 0" v-bind:class="{active:currentIndex == 0}">tab0</button><button v-on:click="currentIndex = 1" v-bind:class="{active:currentIndex == 1}">tab1</button><button v-on:click="currentIndex = 2" v-bind:class="{active:currentIndex == 2}">tab2</button>
+								</div>
+							</div>
+							<br>
+							<div>
+								<div class="cv-btn-group dark-style">
+									<button v-on:click="currentIndex = 0" v-bind:class="{active:currentIndex == 0}">tab0</button><button v-on:click="currentIndex = 1" v-bind:class="{active:currentIndex == 1}">tab1</button><button v-on:click="currentIndex = 2" v-bind:class="{active:currentIndex == 2}">tab2</button>
+								</div>
+							</div>
+						</div>
+					</li>
 				</ul>
 			</div>
 		</cv-scroll>
