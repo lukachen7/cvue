@@ -8,6 +8,7 @@
 		<div><input type="checkbox" v-for="item in checkboxData" v-model="item.checked" v-bind:value="item.value"/></div>
 		<div>scroll</div>
 		<div>scroll</div>
+		<button v-on:click="navPush(clientPages.testPage2)">跳转到{{clientPages.testPage2}}</button>
 		<div>scroll</div>
 		<div>scroll</div>
 		<div>scroll</div>
@@ -15,7 +16,7 @@
 		<div>scroll</div>
 		<div>scroll</div>
 	</cv-scroll>
-	<button v-on:click="navPush(clientPages.testPage2)">跳转到{{clientPages.testPage2}}</button>
+
 	<cv-scroll ref="cvScroll2" :is-refresh="false" :is-load-more="false" v-on:pullDownAction="pullDownAction" v-on:pullUpAction="pullUpAction" style="height:200px;">
 		<div>scroll</div>
 		<div>scroll</div>

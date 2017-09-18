@@ -1,31 +1,31 @@
 <div>
 	<p>testpage2</p>
 	<button v-on:click="$emit('navBack')">back</button>
-	<cv-slider>
-		<!--横排内容如果分行会有小间隔BUG-->
-		<div v-for="item in tmpList" class="cv-slider-item">1i1222222</div>
-	</cv-slider>
-	<cv-scroll ref="cvScroll2" :is-refresh="false" :is-load-more="false" style="height:200px;">
-		<cv-slider auto-play="true">
-			<div v-for="item in tmpList" class="cv-slider-item">1i1222222-{{item}}</div>
-		</cv-slider>
-		<div>scroll</div>
-		<div>scroll</div>
-		<div>scroll</div>
-		<div>scroll</div>
-		<div>scroll</div>
-		<div>scroll</div>
-		<div>scroll</div>
-		<div>scroll</div>
-		<div>scroll</div>
-		<div>scroll</div>
-		<div>scroll</div>
-	</cv-scroll>
+	<!--<cv-slider>-->
+		<!--&lt;!&ndash;横排内容如果分行会有小间隔BUG&ndash;&gt;-->
+		<!--<div v-for="item in tmpList" class="cv-slider-item">1i1222222</div>-->
+	<!--</cv-slider>-->
+	<!--<cv-scroll ref="cvScroll2" :is-refresh="false" :is-load-more="false" style="height:200px;">-->
+		<!--<cv-slider auto-play="true">-->
+			<!--<div v-for="item in tmpList" class="cv-slider-item">1i1222222-{{item}}</div>-->
+		<!--</cv-slider>-->
+		<!--<div>scroll</div>-->
+		<!--<div>scroll</div>-->
+		<!--<div>scroll</div>-->
+		<!--<div>scroll</div>-->
+		<!--<div>scroll</div>-->
+		<!--<div>scroll</div>-->
+		<!--<div>scroll</div>-->
+		<!--<div>scroll</div>-->
+		<!--<div>scroll</div>-->
+		<!--<div>scroll</div>-->
+		<!--<div>scroll</div>-->
+	<!--</cv-scroll>-->
 	
-	<button v-on:click="showModal">testmodal</button><br /><br />
-	<button v-on:click="showModal2">testmodal2</button><br /><br />
-	<button v-on:click="showCalender">{{selectedDateStr}}</button><br /><br />
-	<button v-on:click="showCalender2">{{selectedDateStr}}</button><br /><br />
-	<button v-on:click="showTree">{{singleItem?singleItem.itemText:'树选择'}}</button><br /><br />
-	<button v-on:click="showTreeMulti">{{multiItemsStr && multiItemsStr !=""?multiItemsStr:'多选树'}}</button>
+	<!--<button v-on:click="showModal">testmodal</button><br /><br />-->
+	<!--<button v-on:click="showModal2">testmodal2</button><br /><br />-->
+	<!--<button v-on:click="showCalender">{{selectedDateStr}}</button><br /><br />-->
+	<!--<button v-on:click="showCalender2">{{selectedDateStr}}</button><br /><br />-->
+	<!--<button v-on:click="showTree">{{singleItem?singleItem.itemText:'树选择'}}</button><br /><br />-->
+	<!--<button v-on:click="showTreeMulti">{{multiItemsStr && multiItemsStr !=""?multiItemsStr:'多选树'}}</button>-->
 </div>

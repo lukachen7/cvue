@@ -407,6 +407,15 @@ body {
   box-sizing: -0-border-box;
   box-sizing: -ms-border-box; }
 
+* {
+  box-sizing: border-box;
+  box-sizing: -webkit-border-box; }
+
+*:not(input):not(textarea), input:read-only, textarea:read-only {
+  -moz-user-select: none;
+  -webkit-user-select: none;
+  user-select: none; }
+
 ul, ol, li {
   list-style: none; }
 
@@ -448,7 +457,8 @@ img {
     text-align: center;
     overflow: hidden;
     background-color: #0099ff;
-    color: #ffffff; }
+    color: #ffffff;
+    transform: translateZ(0px); }
     .cv-nav-container > .cv-nav-header > span {
       position: absolute;
       display: inline-block;
@@ -468,6 +478,7 @@ img {
   .cv-nav-container > .cv-nav-content {
     position: absolute;
     width: 100%;
+    z-index: 109;
     background-color: #ffffff;
     top: 0;
     bottom: 0; }
