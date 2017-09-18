@@ -7,41 +7,41 @@
 }
 @-webkit-keyframes nav-push-in {
   0% {
-      @include transform-set(translateX(100%));    
+      @include transform-set(translateX(100%) translateZ(0));
 //  opacity: .5;
   }
   100% {
-      @include transform-set(translateX(0));  
+      @include transform-set(translateX(0) translateZ(0));
 //  opacity: 1.0;
   }
 }
 @keyframes nav-push-in {
   0% {
-      @include transform-set(translateX(100%));    
+      @include transform-set(translateX(100%) translateZ(0));
 //  opacity: .5;
   }
   100% {
-      @include transform-set(translateX(0));  
+      @include transform-set(translateX(0) translateZ(0));
 //  opacity: 1.0;
   }
 }
 @-webkit-keyframes nav-push-out {
   0% {
-      @include transform-set(translateX(0));  
+      @include transform-set(translateX(0) translateZ(0));
 //  opacity: 1.0;
   }
   100% {
-      @include transform-set(translateX(-100%));  
+      @include transform-set(translateX(-100%) translateZ(0));
 //  opacity: .5;
   }
 }
 @keyframes nav-push-out {
   0% {
-      @include transform-set(translateX(0));  
+      @include transform-set(translateX(0) translateZ(0));
 //  opacity: 1.0;
   }
   100% {
-      @include transform-set(translateX(-100%));  
+      @include transform-set(translateX(-100%) translateZ(0));
 //  opacity: .5;
   }
 }

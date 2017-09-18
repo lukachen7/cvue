@@ -62,6 +62,12 @@ function(Vue,FastClick,rule,timer,app){
 	function onDeviceReady(){
 	    root["platformClass"] = {};
 	    root["platformClass"][window.device.platform] = true;
+        document.addEventListener('backbutton', function (evt) {
+            if (window.device.platform != 'Android') {
+                return;
+            }
+			root.$refs.rootNav.navBack();
+        }, false);
 	}
 	
 	app.root=root;

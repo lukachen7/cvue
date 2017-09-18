@@ -44,9 +44,11 @@ function(Vue,template,_) {
     			this.currentContent = content;
     		},
     		"navBack":function (){
-    			this.effect = "nav-pop";
-    			this.navList.splice((this.navList.length-1),1);
-    			this.currentContent = _.last(this.navList);
+    			if (this.navList.length > 1){
+                    this.effect = "nav-pop";
+                    this.navList.splice((this.navList.length-1),1);
+                    this.currentContent = _.last(this.navList);
+				}
     		},
     		"navPop":function (contentId){
     			//contentId可以是ID(优先匹配)
